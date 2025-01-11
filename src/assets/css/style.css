@@ -9,6 +9,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   /* color: #272829; */
@@ -189,6 +193,7 @@ h6 {
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .nav-menu a i,

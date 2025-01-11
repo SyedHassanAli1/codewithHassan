@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,11 +8,28 @@ import { Router } from '@angular/router';
 })
 export class NavComponent {
 
+  constructor(private scrollService: ScrollService) { }
 
-  constructor(private router: Router) { }
+  // Scroll Services
+  navigateToSection(sectionId: string): void {
+    this.scrollService.scrollToSection(sectionId);
+  }
 
-  isActive(path: string): boolean {
-    return this.router.url.startsWith(path);
+  activeSection: string = '';
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    const sections = document.querySelectorAll('section[id]');
+    let currentSectionId = '';
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 50 && rect.bottom >= 50) {
+        currentSectionId = section.getAttribute('id') || '';
+      }
+    });
+
+    this.activeSection = currentSectionId;
   }
 
 }
