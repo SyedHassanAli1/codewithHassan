@@ -13,6 +13,8 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SectionTitleComponent } from './shared/section-title/section-title.component';
 import { ServiceCardComponent } from './shared/service-card/service-card.component';
+import { PortfolioCardComponent } from './shared/portfolio-card/portfolio-card.component';
+import { CountBoxComponent } from './shared/count-box/count-box.component';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
@@ -28,6 +30,8 @@ import { ServiceCardComponent } from './shared/service-card/service-card.compone
     ContactComponent,
     SectionTitleComponent,
     ServiceCardComponent,
+    PortfolioCardComponent,
+    CountBoxComponent,
   ],
   imports: [
     BrowserModule,
