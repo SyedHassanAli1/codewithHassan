@@ -10,7 +10,7 @@ export class CountBoxComponent {
   @Input() icon: string = '';
   @Input() title: string = '';
   @Input() description: string = '';
-  @Input() startCount: string = '';
-  @Input() endCount: string = '';
+  @Input() startCount: number = 0;
+  @Input() endCount: number = 0;
 
 }
