@@ -15,6 +15,7 @@ import { SectionTitleComponent } from './shared/section-title/section-title.comp
 import { ServiceCardComponent } from './shared/service-card/service-card.component';
 import { PortfolioCardComponent } from './shared/portfolio-card/portfolio-card.component';
 import { CountBoxComponent } from './shared/count-box/count-box.component';
+import { SkillProgressComponent } from './shared/skill-progress/skill-progress.component';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CountBoxComponent } from './shared/count-box/count-box.component';
     ServiceCardComponent,
     PortfolioCardComponent,
     CountBoxComponent,
+    SkillProgressComponent,
   ],
   imports: [
     BrowserModule,
