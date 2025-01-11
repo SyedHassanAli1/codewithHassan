@@ -1,0 +1,29 @@
+<section id="about" class="about">
+    <div class="container">
+
+        <app-section-title [title]="'About'"
+            [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-section-title>
+
+        <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+                <img [src]="profileImage" class="img-fluid" alt="Profile Image">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+                <app-about-header [title]="'test'"
+                    [intro]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-about-header>
+                <div class="row">
+                    <div *ngFor="let column of details; let colIndex = index" class="col-lg-6">
+                        <ul>
+                            <li *ngFor="let detail of column">
+                                <i [class]="detail.icon"></i>
+                                <strong>{{ detail.label }}:</strong> <span>{{ detail.value }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>{{ description }}</p>
+            </div>
+        </div>
+
+    </div>
+</section>

@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { SkillsComponent } from './pages/skills/skills.component';
@@ -16,6 +14,8 @@ import { ServiceCardComponent } from './shared/service-card/service-card.compone
 import { PortfolioCardComponent } from './shared/portfolio-card/portfolio-card.component';
 import { CountBoxComponent } from './shared/count-box/count-box.component';
 import { SkillProgressComponent } from './shared/skill-progress/skill-progress.component';
+import { AboutHeaderComponent } from './shared/about-header/about-header.component';
+import { AboutSectionComponent } from './pages/home/sections/about-section/about-section.component';
 // import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
@@ -23,7 +23,6 @@ import { SkillProgressComponent } from './shared/skill-progress/skill-progress.c
     AppComponent,
     NavComponent,
     HomeComponent,
-    AboutComponent,
     ResumeComponent,
     PortfolioComponent,
     SkillsComponent,
@@ -34,6 +33,8 @@ import { SkillProgressComponent } from './shared/skill-progress/skill-progress.c
     PortfolioCardComponent,
     CountBoxComponent,
     SkillProgressComponent,
+    AboutHeaderComponent,
+    AboutSectionComponent,
   ],
   imports: [
     BrowserModule,
