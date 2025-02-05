@@ -19,6 +19,9 @@ import { ServciesSectionComponent } from './pages/home/sections/servcies-section
 import { TestimonialsSectionComponent } from './pages/home/sections/testimonials-section/testimonials-section.component';
 import { ContactSectionComponent } from './pages/home/sections/contact-section/contact-section.component';
 import { HomeComponent } from './pages/home/home.component';
+import { IconTagComponent } from './shared/icon-tag/icon-tag.component';
+import { InputComponent } from './shared/input/input.component';
+import { TextareaComponent } from './shared/textarea/textarea.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { HomeComponent } from './pages/home/home.component';
     CountBoxComponent,
     SkillProgressComponent,
     AboutHeaderComponent,
+    IconTagComponent,
+    InputComponent,
+    TextareaComponent,
   ],
   imports: [
     BrowserModule,
