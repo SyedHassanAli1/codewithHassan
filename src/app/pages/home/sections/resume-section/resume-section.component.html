@@ -4,11 +4,14 @@
         <app-section-title [title]="'Resume'"
             [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-section-title>
 
-        <div class="row">
+        <div class="row" *ngIf="isScreen == 1">
+
             <div class="col-lg-6" data-aos="fade-up">
+
+                <!-- Objective -->
                 <h3 class="resume-title">Sumary</h3>
                 <div class="resume-item pb-0">
-                    <h4>Alex Smith</h4>
+                    <h4>test</h4>
                     <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
                             developing user-centered digital/print marketing material from initial concept to final,
                             polished deliverable.</em></p>
@@ -19,6 +22,7 @@
                     </ul>
                 </div>
 
+                <!-- Education -->
                 <h3 class="resume-title">Education</h3>
                 <div class="resume-item">
                     <h4>Master of Fine Arts &amp; Graphic Design</h4>
@@ -35,8 +39,30 @@
                         ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur
                         neque etlon sader mart dila</p>
                 </div>
+
+                <!-- Certfiations -->
+                <h3 class="resume-title">Certfiations</h3>
+                <div class="resume-item">
+                    <h4>Master of Fine Arts &amp; Graphic Design</h4>
+                    <h5>2015 - 2016</h5>
+                    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                    <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero
+                        voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                </div>
+                <div class="resume-item">
+                    <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+                    <h5>2010 - 2014</h5>
+                    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                    <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel
+                        ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur
+                        neque etlon sader mart dila</p>
+                </div>
+
             </div>
+
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+                <!-- Experience -->
                 <h3 class="resume-title">Professional Experience</h3>
                 <div class="resume-item">
                     <h4>Senior graphic design specialist</h4>
@@ -66,7 +92,125 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- Recent Projects -->
+                <h3 class="resume-title">Recent Projects</h3>
+                <div class="resume-item">
+                    <h4>Master of Fine Arts &amp; Graphic Design</h4>
+                    <h5>2015 - 2016</h5>
+                    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                    <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero
+                        voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                </div>
+                <div class="resume-item">
+                    <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+                    <h5>2010 - 2014</h5>
+                    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                    <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel
+                        ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur
+                        neque etlon sader mart dila</p>
+                </div>
+
             </div>
+
+        </div>
+
+        <!-- 1st Dynamic Approach -->
+        <!-- <div class="row" *ngIf="isScreen == 2">
+            <div class="col-lg-6" data-aos="fade-up" *ngFor="let section of resumeSections">
+                <h3 class="resume-title">{{ section.title }}</h3>
+
+                <div class="resume-item" *ngFor="let item of section.items">
+                    <h4>{{ item.heading }}</h4>
+                    <h5 *ngIf="item?.duration">{{ item.duration }}</h5>
+                    <p *ngIf="item?.location"><em>{{ item.location }}</em></p>
+                    <p *ngIf="item?.description && item.description !== ''">{{ item.description }}</p>
+
+                    <ul *ngIf="item?.list?.length">
+                        <li *ngFor="let listItem of item.list">{{ listItem }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- 2nd Dynamic Approach -->
+        <!-- <div class="row">
+
+            <div class="col-lg-6" data-aos="fade-up">
+                <div *ngFor="let section of resumeSections.filter(s => s.column === 'left')">
+                    <h3 class="resume-title">{{ section.title }}</h3>
+        
+                    <div *ngFor="let item of section.items" class="resume-item">
+                        <h4>{{ item.heading }}</h4>
+                        <h5 *ngIf="item.duration">{{ item.duration }}</h5>
+                        <p *ngIf="item.location"><em>{{ item.location }}</em></p>
+                        <p *ngIf="item.description">{{ item.description }}</p>
+        
+                        <ul *ngIf="item.list.length">
+                            <li *ngFor="let listItem of item.list">{{ listItem }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div *ngFor="let section of resumeSections.filter(s => s.column === 'right')">
+                    <h3 class="resume-title">{{ section.title }}</h3>
+        
+                    <div *ngFor="let item of section.items" class="resume-item">
+                        <h4>{{ item.heading }}</h4>
+                        <h5 *ngIf="item.duration">{{ item.duration }}</h5>
+                        <p *ngIf="item.location"><em>{{ item.location }}</em></p>
+                        <p *ngIf="item.description">{{ item.description }}</p>
+        
+                        <ul *ngIf="item.list.length">
+                            <li *ngFor="let listItem of item.list">{{ listItem }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+
+        <!-- 3rd Dynamic Approach -->
+        <div class="row" *ngIf="isScreen == 2">
+
+            <!-- Left Column (Objective, Education, Certifications) -->
+            <div class="col-lg-6" data-aos="fade-up">
+                <div *ngFor="let section of leftColumnSections">
+                    <h3 class="resume-title">{{ section.title }}</h3>
+        
+                    <div class="resume-item" *ngFor="let item of section.items">
+                        <h4>{{ item.heading }}</h4>
+                        <h5 *ngIf="item.duration">{{ item.duration }}</h5>
+                        <p *ngIf="item.location"><em>{{ item.location }}</em></p>
+                        <p *ngIf="item.description">{{ item.description }}</p>
+        
+                        <ul *ngIf="item.list.length">
+                            <li *ngFor="let listItem of item.list">{{ listItem }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Right Column (Experience, Recent Projects) -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div *ngFor="let section of rightColumnSections">
+                    <h3 class="resume-title">{{ section.title }}</h3>
+        
+                    <div class="resume-item" *ngFor="let item of section.items">
+                        <h4>{{ item.heading }}</h4>
+                        <h5 *ngIf="item.duration">{{ item.duration }}</h5>
+                        <p *ngIf="item.location"><em>{{ item.location }}</em></p>
+                        <p *ngIf="item.description">{{ item.description }}</p>
+        
+                        <ul *ngIf="item.list.length">
+                            <li *ngFor="let listItem of item.list">{{ listItem }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
