@@ -51,18 +51,18 @@
                         <i class="fa-solid fa-rectangle-list"></i> <span>Skills</span></a>
                 </li>
 
-                <!-- Servcies Section -->
-                <li>
-                    <a (click)="navigateToSection('services-section')" class="nav-link scrollto"
-                        [class.active]="activeSection === 'services-section'">
-                        <i class="fa-solid fa-server"></i> <span>Services</span></a>
-                </li>
-
                 <!-- Resume Section -->
                 <li>
                     <a (click)="navigateToSection('resume-section')" class="nav-link scrollto"
                         [class.active]="activeSection === 'resume-section'">
                         <i class="fa-solid fa-address-card"></i> <span>Resume</span></a>
+                </li>
+
+                <!-- Servcies Section -->
+                <li>
+                    <a (click)="navigateToSection('services-section')" class="nav-link scrollto"
+                        [class.active]="activeSection === 'services-section'">
+                        <i class="fa-solid fa-server"></i> <span>Services</span></a>
                 </li>
 
                 <!-- Portfolio Section -->
@@ -80,8 +80,8 @@
                 </li>
 
                 <!-- Testimonials Section -->
-                <li *ngIf="false">
-                    <a (click)="navigateToSection('testimonials-section')" class="nav-link scrollto"
+                <li>
+                    <a (click)="navigateToSection('testimonial-section')" class="nav-link scrollto"
                         [class.active]="activeSection === 'testimonials-section'">
                         <i class="fa-solid fa-circle-info"></i> <span>Testimonials</span></a>
                 </li>
