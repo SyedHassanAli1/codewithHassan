@@ -1,11 +1,14 @@
+<!-- ======= Mobile nav toggle button ======= -->
+<!-- <i class="bi bi-list mobile-nav-toggle d-xl-none"></i> -->
+
 <!-- ======= Header ======= -->
 <header id="header">
     <div class="d-flex flex-column">
 
-        <div class="profile">
-            <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <div class="profile mt-5">
+            <!-- <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle"> -->
             <h1 class="text-light"><a href="index.html">Syed Hassan Ali</a></h1>
-            <div class="social-links mt-3 text-center">
+            <div class="social-links mt-4 text-center">
                 <a href="#" class="google-plus"><i class="bx bxl-behance"></i></a>
                 <a href="#" class="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                         viewBox="0 0 48 48">
@@ -80,7 +83,7 @@
                 </li>
 
                 <!-- Testimonials Section -->
-                <li>
+                <li *ngIf="false">
                     <a (click)="navigateToSection('testimonial-section')" class="nav-link scrollto"
                         [class.active]="activeSection === 'testimonials-section'">
                         <i class="fa-solid fa-circle-info"></i> <span>Testimonials</span></a>
@@ -90,7 +93,7 @@
                 <li>
                     <a (click)="navigateToSection('contact-section')" class="nav-link scrollto"
                         [class.active]="activeSection === 'contact-section'">
-                        <i class="fa-solid fa-phone"></i> <span>Contact</span></a>
+                        <i class="fa-solid fa-phone"></i> <span>Let’s Talk</span></a>
                 </li>
 
             </ul>

@@ -22,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { IconTagComponent } from './shared/icon-tag/icon-tag.component';
 import { InputComponent } from './shared/input/input.component';
 import { TextareaComponent } from './shared/textarea/textarea.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { TextareaComponent } from './shared/textarea/textarea.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
     
   ],
   exports: [
