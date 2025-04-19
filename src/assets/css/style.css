@@ -122,7 +122,7 @@ h6 {
   color: #fff;
   line-height: 1;
   padding: 8px 0;
-  margin-right: 4px;
+  margin-right: 14px;
   border-radius: 50%;
   text-align: center;
   width: 36px;
@@ -188,7 +188,7 @@ h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-  padding: 30px 0 0 10px;
+  padding: 40px 0 0 18px;
 }
 
 .nav-menu * {
@@ -208,7 +208,7 @@ h6 {
   align-items: center;
   /* color: #c0c0c0; */
   color: #ffffff;
-  padding: 12px 15px;
+  padding: 14px 16px;
   margin-bottom: 8px;
   transition: 0.3s;
   font-size: 15px;
@@ -251,7 +251,7 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: #000000;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -300,7 +300,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  background: rgba(5, 13, 24, 0.5);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -313,32 +313,31 @@ h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
-  left: 180px;
-  bottom: 50px;
+  left: 300px;
+  bottom: 100px;
   padding: 20px;
-  /* background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3); */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 24px;
 }
 
 #hero h1 {
   margin: 0 0 4px 0;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 5vw, 2rem);
   font-weight: 700;
-  line-height: 56px;
+  line-height: 46px;
   color: #fff;
 }
 
 #hero p {
   color: #fff;
-  font-size: clamp(1.2rem, 5vw, 1rem);
+  opacity: 90%;
+  font-size: clamp(.9rem, 5vw, .9rem);
   font-weight: 100;
   font-family: "Poppins", sans-serif;
   margin: 0 0 10px 0;
-
+  letter-spacing: 1px;
 }
 
 #hero p span {
@@ -356,8 +355,8 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    /* font-size: 28px;
+    line-height: 36px; */
   }
 
   #hero h2 {
@@ -1247,4 +1246,74 @@ section {
 /* Changes the thumb color on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+/* Responsive */
+/* Extra Small Devices (portrait phones, less than 480px) */
+@media (max-width: 479px) {
+  #hero .hero-container {
+    left: 0;
+    bottom: 200px;
+  }
+
+  #hero {
+    background: url("../img/cover-xs.jpg") top center;
+    background-size: cover;
+  }
+}
+
+/* Small Mobile Devices */
+@media (min-width: 480px) and (max-width: 767px) {
+  #hero .hero-container {
+    left: 0;
+    bottom: 200px;
+  }
+
+  #hero {
+    background: url("../img/cover-sm.jpg") top center;
+    background-size: cover;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #hero .hero-container {
+    left: 0;
+    bottom: 200px;
+  }
+
+  #hero {
+    background: url("../img/cover-md.jpg") top center;
+    background-size: cover;
+  }
+}
+
+/* Small Laptops */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #hero .hero-container {
+    left: 0;
+    bottom: 200px;
+  }
+
+  #hero {
+    background: url("../img/cover-lg.jpg") top center;
+    background-size: cover;
+  }
+}
+
+/* Standard Desktops */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  #hero {
+    background: url("../img/cover-xl.jpg") top center;
+    background-size: cover;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1440px) {
+  #hero {
+    background: url("../img/cover-xxl.jpg") top center;
+    background-size: cover;
+  }
 }
