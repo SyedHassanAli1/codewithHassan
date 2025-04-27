@@ -274,29 +274,36 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+/* #hero {
   width: 100%;
   height: 100vh;
   background: url("../img/desk-coverImg-color.jpg") top center;
   background-size: cover;
-}
+} */
 
+/* 
 #hero {
   width: 100%;
   height: 100vh;
   background: url("../img/desk-coverImg-color.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* Optional for parallax effect */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
-  /* text-align: center; */
   color: white;
+} */
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
-
-
 
 #hero:before {
   content: "";
@@ -354,11 +361,6 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero h1 {
-    /* font-size: 28px;
-    line-height: 36px; */
-  }
-
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -369,14 +371,13 @@ h6 {
     left: 0;
     bottom: 160px;
   }
-
+/* 
   #hero {
     width: 100%;
     height: 100vh;
     background: url("../img/mob-coverImg-color.jpg") top center;
     background-size: cover;
-  }
-
+  } */
 }
 
 /*--------------------------------------------------------------
@@ -1250,8 +1251,7 @@ section {
 
 
 /* Responsive */
-/* Extra Small Devices (portrait phones, less than 480px) */
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
   #hero .hero-container {
     left: 0;
     bottom: 200px;
@@ -1263,7 +1263,6 @@ section {
   }
 }
 
-/* Small Mobile Devices */
 @media (min-width: 480px) and (max-width: 767px) {
   #hero .hero-container {
     left: 0;
@@ -1276,7 +1275,6 @@ section {
   }
 }
 
-/* Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
   #hero .hero-container {
     left: 0;
@@ -1289,7 +1287,6 @@ section {
   }
 }
 
-/* Small Laptops */
 @media (min-width: 1024px) and (max-width: 1279px) {
   #hero .hero-container {
     left: 0;
@@ -1302,7 +1299,6 @@ section {
   }
 }
 
-/* Standard Desktops */
 @media (min-width: 1280px) and (max-width: 1439px) {
   #hero {
     background: url("../img/cover-xl.jpg") top center;
@@ -1310,10 +1306,45 @@ section {
   }
 }
 
-/* Large Screens */
 @media (min-width: 1440px) {
   #hero {
     background: url("../img/cover-xxl.jpg") top center;
     background-size: cover;
+  }
+} */
+
+@media (max-width: 479px) {
+  #hero {
+    background-image: url("../img/cover-xs.jpg");
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  #hero {
+    background-image: url("../img/cover-sm.jpg");
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #hero {
+    background-image: url("../img/cover-md.jpg");
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #hero {
+    background-image: url("../img/cover-lg.jpg");
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  #hero {
+    background-image: url("../img/cover-xl.jpg");
+  }
+}
+
+@media (min-width: 1440px) {
+  #hero {
+    background-image: url("../img/cover-xxl.jpg");
   }
 }
