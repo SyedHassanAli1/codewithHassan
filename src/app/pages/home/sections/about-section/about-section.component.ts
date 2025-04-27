@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AboutSectionComponent {
 
-  profileImage: string = 'assets/img/profile-img.jpg';
+  profileImage: string = 'https://fakeimg.pl/352x352';
   title: string = 'UI/UX Designer & Web Developer';
   intro: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
   details: { label: string, value: string, icon: string }[][] = [
