@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { ScrollService } from '../scroll.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -8,11 +9,17 @@ import { ScrollService } from '../scroll.service';
 })
 export class NavComponent {
 
-  constructor(private scrollService: ScrollService) { }
+  constructor(
+    private scrollService: ScrollService,
+    private router: Router
+  ) { }
 
   // Scroll Services
-  navigateToSection(sectionId: string): void {
+  navigateToSection(sectionId: string,url: string): void {
+    document.getElementById('closeNavBtn')?.click()
     this.scrollService.scrollToSection(sectionId);
+    // this.router.navigate([url]);
+
   }
 
   activeSection: string = '';

@@ -11,8 +11,9 @@ import { TestimonialsSectionComponent } from './pages/home/sections/testimonials
 import { ContactSectionComponent } from './pages/home/sections/contact-section/contact-section.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect to home if no path is provided
-  { path: 'home', component: HeroSectionComponent },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect to home if no path is provided
+  
+  { path: '', component: HeroSectionComponent },
   { path: 'about', component: AboutSectionComponent },
   { path: 'skills', component: SkillsSectionComponent },
   { path: 'services', component: ServciesSectionComponent },

@@ -32,63 +32,63 @@
             <ul>
                 <!-- Hero Section -->
                 <li>
-                    <a (click)="navigateToSection('hero-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('hero-section','')" class="nav-link scrollto" 
                         [class.active]="activeSection === 'hero-section'">
                         <i class="fa-solid fa-house-chimney"></i> <span>Home</span></a>
                 </li>
 
                 <!-- About Section -->
                 <li>
-                    <a (click)="navigateToSection('about-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('about-section','about')" class="nav-link scrollto" id="aboutUsDv"
                         [class.active]="activeSection === 'about-section'">
                         <i class="fa-solid fa-circle-info"></i> <span>About</span></a>
                 </li>
 
                 <!-- Skills Section -->
                 <li>
-                    <a (click)="navigateToSection('skills-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('skills-section','skills')" class="nav-link scrollto" id="skillsDv"
                         [class.active]="activeSection === 'skills-section'">
                         <i class="fa-solid fa-rectangle-list"></i> <span>Skills</span></a>
                 </li>
 
                 <!-- Resume Section -->
                 <li>
-                    <a (click)="navigateToSection('resume-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('resume-section','resume')" class="nav-link scrollto" id="resumeDv"
                         [class.active]="activeSection === 'resume-section'">
                         <i class="fa-solid fa-address-card"></i> <span>Resume</span></a>
                 </li>
 
                 <!-- Servcies Section -->
                 <li>
-                    <a (click)="navigateToSection('services-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('services-section','services')" class="nav-link scrollto" id="servicesDv"
                         [class.active]="activeSection === 'services-section'">
                         <i class="fa-solid fa-server"></i> <span>Services</span></a>
                 </li>
 
                 <!-- Portfolio Section -->
                 <li>
-                    <a (click)="navigateToSection('portfolio-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('portfolio-section','portfolio')" class="nav-link scrollto" id="portfolioDv"
                         [class.active]="activeSection === 'portfolio-section'">
                         <i class="fa-solid fa-briefcase"></i> <span>Portfolio</span></a>
                 </li>
 
                 <!-- Facts Section -->
                 <li *ngIf="false">
-                    <a (click)="navigateToSection('fact-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('fact-section','facts')" class="nav-link scrollto" id="factsDv"
                         [class.active]="activeSection === 'fact-section'">
                         <i class="fa-solid fa-circle-info"></i> <span>Facts</span></a>
                 </li>
 
                 <!-- Testimonials Section -->
                 <li *ngIf="false">
-                    <a (click)="navigateToSection('testimonial-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('testimonial-section','testimonials')" class="nav-link scrollto" id="testimonialDv"
                         [class.active]="activeSection === 'testimonials-section'">
                         <i class="fa-solid fa-circle-info"></i> <span>Testimonials</span></a>
                 </li>
 
                 <!-- Contact Section -->
                 <li>
-                    <a (click)="navigateToSection('contact-section')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('contact-section','contact')" class="nav-link scrollto" id="contactDv"
                         [class.active]="activeSection === 'contact-section'">
                         <i class="fa-solid fa-phone"></i> <span>Let’s Talk</span></a>
                 </li>
