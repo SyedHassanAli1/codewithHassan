@@ -4,120 +4,126 @@
         <app-section-title [title]="'Let’s Talk'"
             [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-section-title>
 
-        <div class="row gy-4 justify-content-center" data-aos="fade-in">
+        <div class="content-wrap">
 
-            <div class="col-lg-5 d-flex align-items-stretch">
-                <div class="info">
+            <div class="row gy-4 justify-content-center" data-aos="fade-in">
 
-                    <!-- Address -->
-                    <app-icon-tag [icon]="'geo-alt'" [title]="'Location'"
-                        [detail]="'karachi, Pakistan'"></app-icon-tag>
+                <div class="col-lg-5 d-flex align-items-stretch">
+                    <div class="info">
 
-                    <!-- Email -->
-                    <app-icon-tag [icon]="'envelope'" [title]="'Email'" [detail]="'info at syedhassanali1306@gmail.com'"></app-icon-tag>
+                        <!-- Address -->
+                        <app-icon-tag [icon]="'geo-alt'" [title]="'Location'"
+                            [detail]="'karachi, Pakistan'"></app-icon-tag>
 
-                    <!-- Call    -->
-                    <app-icon-tag [icon]="'phone'" [title]="'Call'" [detail]="'+92 332 828 5207'"></app-icon-tag>
+                        <!-- Email -->
+                        <app-icon-tag [icon]="'envelope'" [title]="'Email'"
+                            [detail]="'info at syedhassanali1306@gmail.com'"></app-icon-tag>
 
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14477.513003803032!2d67.0011012!3d24.8607344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e5f8e6724a9%3A0xf489368c6f04c6b4!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1713105294813!5m2!1sen!2sus"
-                    frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                        <!-- Call    -->
+                        <app-icon-tag [icon]="'phone'" [title]="'Call'" [detail]="'+92 332 828 5207'"></app-icon-tag>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14477.513003803032!2d67.0011012!3d24.8607344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e5f8e6724a9%3A0xf489368c6f04c6b4!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1713105294813!5m2!1sen!2sus"
+                            frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="col-lg-7 d-flex align-items-stretch">
 
-            <div class="col-lg-7 mt-lg-0 d-flex align-items-stretch">
+                    <form class="php-email-form d-none" (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
 
-                <form class="php-email-form d-none" (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
+                        <div class="row">
 
-                    <div class="row">
-
-                        <!-- Name -->
-                        <div class="col-md-6">
-                            <!-- <app-input [id]="'name'" [label]="'Name'" [type]="'text'" [placeholder]="'Alex John'"></app-input> -->
-                        </div>
-
-                        <!-- Email -->
-                        <div class="col-md-6">
-                            <!-- <app-input [id]="'email'" [label]="'Email'" [type]="'email'" [placeholder]="'alex_john1@gmail.com'"></app-input> -->
-                        </div>
-
-                        <!-- Subject -->
-                        <div class="col-md-12">
-                            <!-- <app-input [id]="'subject'" [label]="'Subject'" [type]="'text'" [placeholder]="'I want UI/UX consultancy'"></app-input> -->
-                        </div>
-
-                        <!-- Message -->
-                        <div class="col-md-12">
-                            <!-- <app-textarea [id]="'message'" [label]="'Message'" [rows]="10" [placeholder]="'Write your message here...'"></app-textarea> -->
-                        </div>
-
-                    </div>
-
-                    <div class="my-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                    </div>
-
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-
-                </form>
-
-                <form class="php-email-form" (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
-                
-                    <div class="row">
-                
-                        <!-- Name -->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name">Full Name <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="name" [(ngModel)]="formData.name"
-                                    placeholder="Ex: Alex John" required>
+                            <!-- Name -->
+                            <div class="col-md-6">
+                                <!-- <app-input [id]="'name'" [label]="'Name'" [type]="'text'" [placeholder]="'Alex John'"></app-input> -->
                             </div>
-                        </div>
-                
-                        <!-- Email -->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Email Address <span class="text-danger">*</span></label>
-                                <input class="form-control" type="email" name="email" [(ngModel)]="formData.email"
-                                    placeholder="Ex: alex.john@example.com" required>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <!-- <app-input [id]="'email'" [label]="'Email'" [type]="'email'" [placeholder]="'alex_john1@gmail.com'"></app-input> -->
                             </div>
-                        </div>
-                
-                        <!-- Subject -->
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="subject">Message Subject <span class="text-danger">*</span></label>
-                                <input class="form-control" type="text" name="subject" [(ngModel)]="formData.subject"
-                                    placeholder="Ex: Inquiry about services" required>
+
+                            <!-- Subject -->
+                            <div class="col-md-12">
+                                <!-- <app-input [id]="'subject'" [label]="'Subject'" [type]="'text'" [placeholder]="'I want UI/UX consultancy'"></app-input> -->
                             </div>
-                        </div>
-                
-                        <!-- Message -->
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="message">Your Message <span class="text-danger">*</span></label>
-                                <textarea class="form-control" name="message" [(ngModel)]="formData.message" rows="8"
-                                    placeholder="Write your message here..." required></textarea>
+
+                            <!-- Message -->
+                            <div class="col-md-12">
+                                <!-- <app-textarea [id]="'message'" [label]="'Message'" [rows]="10" [placeholder]="'Write your message here...'"></app-textarea> -->
                             </div>
+
                         </div>
-                
-                    </div>
-                
-                    <div class="my-3">
-                        <div class="loading">Sending message...</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent successfully. Thank you!</div>
-                    </div>
-                
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                
-                </form>
+
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+
+                    </form>
+
+                    <form class="php-email-form" (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
+
+                        <div class="row">
+
+                            <!-- Name -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Full Name <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" name="name" [(ngModel)]="formData.name"
+                                        placeholder="Ex: Alex John" required>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="email" name="email" [(ngModel)]="formData.email"
+                                        placeholder="Ex: alex.john@example.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="subject">Message Subject <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" name="subject"
+                                        [(ngModel)]="formData.subject" placeholder="Ex: Inquiry about services"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="message">Your Message <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" name="message" [(ngModel)]="formData.message"
+                                        rows="10" placeholder="Write your message here..." required></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="my-3">
+                            <div class="loading">Sending message...</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent successfully. Thank you!</div>
+                        </div>
+
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+
+                    </form>
+
+                </div>
 
             </div>
 

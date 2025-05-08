@@ -23,6 +23,7 @@ import { IconTagComponent } from './shared/icon-tag/icon-tag.component';
 import { InputComponent } from './shared/input/input.component';
 import { TextareaComponent } from './shared/textarea/textarea.component';
 import { FormsModule } from '@angular/forms';
+import { SkillCardComponent } from './shared/skill-card/skill-card.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FormsModule } from '@angular/forms';
     IconTagComponent,
     InputComponent,
     TextareaComponent,
+    SkillCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,31 +4,16 @@
         <app-section-title [title]="'Services'"
             [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-section-title>
 
-        <div class="row">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
-                <app-service-card [icon]="'briefcase'" [title]="'Services'"
-                    [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-service-card>
+        <div class="content-wrap">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6" *ngFor="let s of services" data-aos="fade-up"
+                    [attr.data-aos-delay]="s.delay">
+                    <app-service-card [icon]="s.icon" [title]="s.title"
+                        [description]="s.description"></app-service-card>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <app-service-card [icon]="'briefcase'" [title]="'Services'"
-                    [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-service-card>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <app-service-card [icon]="'briefcase'" [title]="'Services'"
-                    [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-service-card>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <app-service-card [icon]="'briefcase'" [title]="'Services'"
-                    [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-service-card>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <app-service-card [icon]="'briefcase'" [title]="'Services'"
-                    [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-service-card>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <app-service-card [icon]="'briefcase'" [title]="'Services'"
-                    [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-service-card>
-            </div>
+
         </div>
 
     </div>

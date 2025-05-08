@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ResumeSectionComponent {
 
-  isScreen: number = 2;
+  isScreen: number = 1;
 
   resumeSections = [
 

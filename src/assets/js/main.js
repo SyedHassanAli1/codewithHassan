@@ -170,9 +170,9 @@
         itemSelector: '.portfolio-item'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let portfolioFilters = select('#portfolio-filters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-filters li', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
           el.classList.remove('filter-active');
@@ -183,6 +183,36 @@
           filter: this.getAttribute('data-filter')
         });
         portfolioIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
+
+  /**
+  * Skills isotope and filter
+  */
+  window.addEventListener('load', () => {
+    let skillContainer = select('.skill-container');
+    if (skillContainer) {
+      let skilIsotope = new Isotope(skillContainer, {
+        itemSelector: '.skill-item'
+      });
+
+      let skillFilters = select('#skill-filters li', true);
+
+      on('click', '#skill-filters li', function (e) {
+        e.preventDefault();
+        skillFilters.forEach(function (el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        skilIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        skilIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);

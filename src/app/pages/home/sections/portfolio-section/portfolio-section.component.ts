@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class PortfolioSectionComponent {
 
+  portfolioItems = [
+  { image: 'portfolio-1', filter: 'web' },
+  { image: 'portfolio-2', filter: 'web' },
+  { image: 'portfolio-3', filter: 'web' },
+  { image: 'portfolio-4', filter: 'web' },
+  { image: 'portfolio-5', filter: 'web' },
+  { image: 'portfolio-6', filter: 'app' },
+  { image: 'portfolio-7', filter: 'app' },
+  { image: 'portfolio-8', filter: 'app' },
+  { image: 'portfolio-9', filter: 'app' }
+];
+
 }
