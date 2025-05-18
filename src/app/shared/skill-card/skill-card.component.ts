@@ -6,9 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./skill-card.component.css']
 })
 export class SkillCardComponent {
+getProgress(arg0: string) {
+throw new Error('Method not implemented.');
+}
 
   @Input() icon: string = '';
-  @Input() percent: string = '';
+  @Input() level: string = '';
   @Input() skill: string = '';
 
 }

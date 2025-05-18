@@ -1,14 +1,14 @@
 <section class="contact">
     <div class="container">
 
-        <app-section-title [title]="'Let’s Talk'"
-            [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-section-title>
+        <app-section-title [title]="'Got an Idea? Let’s Build It.'"
+            [description]="'Whether you\'re looking for a designer, developer, or both—I\'m always open to new collaborations. Let’s connect and create something great.'"></app-section-title>
 
         <div class="content-wrap">
 
             <div class="row gy-4 justify-content-center" data-aos="fade-in">
 
-                <div class="col-lg-5 d-flex align-items-stretch">
+                <div *ngIf="false" class="col-lg-5 d-flex align-items-stretch">
                     <div class="info">
 
                         <!-- Address -->
@@ -32,43 +32,7 @@
 
                 </div>
 
-                <div class="col-lg-7 d-flex align-items-stretch">
-
-                    <form class="php-email-form d-none" (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
-
-                        <div class="row">
-
-                            <!-- Name -->
-                            <div class="col-md-6">
-                                <!-- <app-input [id]="'name'" [label]="'Name'" [type]="'text'" [placeholder]="'Alex John'"></app-input> -->
-                            </div>
-
-                            <!-- Email -->
-                            <div class="col-md-6">
-                                <!-- <app-input [id]="'email'" [label]="'Email'" [type]="'email'" [placeholder]="'alex_john1@gmail.com'"></app-input> -->
-                            </div>
-
-                            <!-- Subject -->
-                            <div class="col-md-12">
-                                <!-- <app-input [id]="'subject'" [label]="'Subject'" [type]="'text'" [placeholder]="'I want UI/UX consultancy'"></app-input> -->
-                            </div>
-
-                            <!-- Message -->
-                            <div class="col-md-12">
-                                <!-- <app-textarea [id]="'message'" [label]="'Message'" [rows]="10" [placeholder]="'Write your message here...'"></app-textarea> -->
-                            </div>
-
-                        </div>
-
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-
-                    </form>
+                <div class="col-lg-12 d-flex align-items-stretch">
 
                     <form class="php-email-form" (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
 
@@ -131,3 +95,26 @@
 
     </div>
 </section>
+
+<!-- Custom Alert Box -->
+<div *ngIf="showAlert" class="custom-alert-overlay">
+    <div class="custom-alert-box">
+
+        <div [ngClass]="['alert_content_wrap', alertType]">
+
+            <!-- Success Icon -->
+            <i *ngIf="alertType === 'success'" class="bi bi-check-circle-fill success"></i>
+
+            <!-- Error Icon -->
+            <i *ngIf="alertType === 'error'" class="bi bi-exclamation-circle-fill error"></i>
+
+            <div class="alert_content">
+                <h6>{{ alertTitle }}</h6>
+                <p>{{ alertMessage }}</p>
+            </div>
+        </div>
+
+        <button (click)="closeAlert()">×</button>
+
+    </div>
+</div>

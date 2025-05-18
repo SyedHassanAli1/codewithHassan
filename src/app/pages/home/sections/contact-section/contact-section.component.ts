@@ -8,16 +8,21 @@ import { NgForm } from '@angular/forms'; // Optional if using template-driven fo
   styleUrls: ['./contact-section.component.css']
 })
 export class ContactSectionComponent {
-formData: any = {
-  name: '',
-  email: '',
-  subject: '',
-  message: ''
 
-};
+  showAlert: boolean = false;
+  alertTitle: string = '';
+  alertMessage: string = '';
+  alertType: 'success' | 'error' = 'success';
+
+  formData: any = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+
+  };
 
   public sendEmail(form: NgForm) {
-    debugger
     if (form.valid) {
       emailjs.send(
         'service_jfkshff',
@@ -31,15 +36,33 @@ formData: any = {
         'nfFIwwwmXlYljyD8t'
       )
         .then(() => {
-          alert('Message sent successfully!');
-          form.reset(); // Clear form
+          this.showCustomAlert('Message sent successfully!', 'success', 'Thanks for contacting');
+          form.reset();
         })
         .catch((error) => {
           console.error('EmailJS Error:', error);
-          alert('Something went wrong. Please try again.');
+          this.showCustomAlert('Something went wrong. Please try again.', 'error', 'Oops! Failed');
         });
     } else {
-      alert('Please fill all fields correctly.');
+      this.showCustomAlert('Please fill all fields correctly.', 'error', 'Form Incomplete');
     }
   }
+
+  showCustomAlert(message: string, type: 'success' | 'error' = 'success', title: string = '') {
+
+    this.showAlert = true;
+    this.alertTitle = title;
+    this.alertMessage = message;
+    this.alertType = type;
+
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      this.showAlert = false;
+    }, 5000);
+  }
+
+  closeAlert() {
+    this.showAlert = false;
+  }
+
 }

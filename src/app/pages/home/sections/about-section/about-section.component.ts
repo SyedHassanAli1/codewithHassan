@@ -24,7 +24,11 @@ export class AboutSectionComponent {
       { label: 'Freelance', value: 'Available', icon: 'bi-check-circle' }
     ]
   ];
-  
-  description: string = ` Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores. Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores. Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores. `;
+
+  descriptionPart1: string = `I’m a UI/UX Designer and Frontend Developer who genuinely enjoys solving real problems through clean, thoughtful design. Over the past few years, I’ve worked on a variety of projects—designing and building websites, web apps, and user interfaces that are not only visually appealing but also intuitive to use.`;
+
+  descriptionPart2: string = `My goal is simple: create experiences that feel effortless for users and make sense from a business perspective. I enjoy the process—from sketching early ideas to seeing the final product live and working. I believe good design is less about trends and more about clarity, consistency, and solving the right problems.`;
+
+  descriptionPart3: string = `I'm always learning, always curious, and I love collaborating with others to bring ideas to life. Whether it's a small landing page or a full-scale application, I aim to create work that I’m proud of and that users actually enjoy interacting with.`;
 
 }

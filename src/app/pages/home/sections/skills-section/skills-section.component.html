@@ -1,8 +1,8 @@
 <section class="skills section-bg">
     <div class="container">
 
-        <app-section-title [title]="'Skills'"
-            [description]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-section-title>
+        <app-section-title [title]="'My Design & Dev Stack'"
+            [description]="'From Figma to Angular and beyond—these are the tools, frameworks, and languages I use to turn ideas into reality.'"></app-section-title>
 
         <div class="content-wrap">
 
@@ -20,7 +20,7 @@
 
             <div class="row skills-content skill-container" data-aos="fade-up" data-aos-delay="100">
                 <div *ngFor="let s of skills" class="col-12 col-md-3 skill-item" [ngClass]="'filter-' + s.category">
-                    <app-skill-card [icon]="s.icon" [percent]="s.percent" [skill]="s.skill"></app-skill-card>
+                    <app-skill-card [icon]="s.icon" [level]="s.level" [skill]="s.skill"></app-skill-card>
                 </div>
             </div>
 

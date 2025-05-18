@@ -1,0 +1,11 @@
+::ng-deep .typed-cursor {
+    color: #fff;
+    font-size: 26px;
+}
+
+@media (max-width: 768px) {
+    ::ng-deep .typed-cursor {
+        color: #fff;
+        font-size: 16px;
+    }
+}

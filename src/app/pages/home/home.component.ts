@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { ScrollService } from 'src/app/shared/scroll.service';
@@ -8,6 +8,9 @@ import { ScrollService } from 'src/app/shared/scroll.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+
+  showBackToTop: boolean = false;
 
   @ViewChild('aboutSection') aboutSection!: ElementRef;
   @ViewChild('skillsSection') skillsSection!: ElementRef;
@@ -20,7 +23,6 @@ export class HomeComponent implements OnInit {
   ) {
 
   }
-
 
   ngOnInit(): void {
     let url = window.location.href;
@@ -64,9 +66,6 @@ export class HomeComponent implements OnInit {
     }, 500)
   }
 
-
-
-
   scrollToSection(section: string) {
     switch (section) {
       case 'about':
@@ -81,6 +80,18 @@ export class HomeComponent implements OnInit {
       default:
         break;
     }
+  }
+
+  // Detect scroll
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    this.showBackToTop = scrollY > 20;
+  }
+
+  // Scroll to top function
+  backToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }
