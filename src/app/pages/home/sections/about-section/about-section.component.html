@@ -4,31 +4,33 @@
         <app-section-title [title]="'Hi, I\'m Hassan'"
             [description]="'With a strong foundation in UI/UX and frontend development, I blend aesthetics with functionality to build meaningful digital products. Here\'s a quick dive into who I am and what drives me.'"></app-section-title>
 
-        <div class="row content-wrap">
-
-            <div *ngIf="false" class="col-lg-4" data-aos="fade-right">
-                <img [src]="profileImage" class="img-fluid" alt="Profile Image">
-            </div>
-
-            <div class="col-lg12 pt-4 pt-lg-0 content" data-aos="fade-left">
-
-                <app-about-header *ngIf="false" [title]="'test'" [intro]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-about-header>
-
-                <div *ngIf="false" class="row">
-                    <div *ngFor="let column of details; let colIndex = index" class="col-lg-6">
-                        <ul>
-                            <li *ngFor="let detail of column">
-                                <i [class]="detail.icon"></i>
-                                <strong>{{ detail.label }}:</strong> <span>{{ detail.value }}</span>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="content-wrap">
+            <div class="row">
+    
+                <div *ngIf="false" class="col-lg-4" data-aos="fade-right">
+                    <img [src]="profileImage" class="img-fluid" alt="Profile Image">
                 </div>
-
-                <p>{{ descriptionPart1 }}</p>
-                <p>{{ descriptionPart2 }}</p>
-                <p>{{ descriptionPart3 }}</p>
-
+    
+                <div class="col-lg12 pt-lg-0 content" data-aos="fade-left">
+    
+                    <app-about-header *ngIf="false" [title]="'test'" [intro]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'"></app-about-header>
+    
+                    <div *ngIf="false" class="row">
+                        <div *ngFor="let column of details; let colIndex = index" class="col-lg-6">
+                            <ul>
+                                <li *ngFor="let detail of column">
+                                    <i [class]="detail.icon"></i>
+                                    <strong>{{ detail.label }}:</strong> <span>{{ detail.value }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <p>{{ descriptionPart1 }}</p>
+                    <p>{{ descriptionPart2 }}</p>
+                    <p>{{ descriptionPart3 }}</p>
+    
+                </div>
             </div>
         </div>
 

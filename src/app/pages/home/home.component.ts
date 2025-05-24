@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { ScrollService } from 'src/app/shared/scroll.service';
@@ -80,18 +80,6 @@ export class HomeComponent implements OnInit {
       default:
         break;
     }
-  }
-
-  // Detect scroll
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scrollY = window.scrollY || document.documentElement.scrollTop;
-    this.showBackToTop = scrollY > 20;
-  }
-
-  // Scroll to top function
-  backToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }

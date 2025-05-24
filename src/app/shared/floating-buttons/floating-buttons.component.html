@@ -1,0 +1,9 @@
+<!-- WhatsApp Button -->
+ <a href="https://wa.me/923328285207" target="_blank" class="btn-whatsapp" [class.shifted]="showBackToTop" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Scroll-to-Top Button -->
+<button type="button" class="btn btn-top btn-floating btn-lg" id="btn-back-to-top" *ngIf="showBackToTop" (click)="backToTop()">
+    <i class="fas fa-arrow-up"></i>
+</button>

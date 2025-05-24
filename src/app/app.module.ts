@@ -24,6 +24,7 @@ import { InputComponent } from './shared/input/input.component';
 import { TextareaComponent } from './shared/textarea/textarea.component';
 import { FormsModule } from '@angular/forms';
 import { SkillCardComponent } from './shared/skill-card/skill-card.component';
+import { FloatingButtonsComponent } from './shared/floating-buttons/floating-buttons.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { SkillCardComponent } from './shared/skill-card/skill-card.component';
     InputComponent,
     TextareaComponent,
     SkillCardComponent,
+    FloatingButtonsComponent,
   ],
   imports: [
     BrowserModule,

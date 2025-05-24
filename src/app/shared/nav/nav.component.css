@@ -2,3 +2,13 @@
     color: #f5f8fd;
     font-weight: bold;
 }
+
+.download {
+    background: #fff;
+    border: 0;
+    padding: 8px 14px;
+    color: #000000;
+    transition: 0.4s;
+    border-radius: 4px;
+    font-size: 14px;
+}
