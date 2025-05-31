@@ -15,12 +15,24 @@ export class NavComponent {
   ) { }
 
   // Scroll Services
-  navigateToSection(sectionId: string,url: string): void {
-    document.getElementById('closeNavBtn')?.click()
-    this.scrollService.scrollToSection(sectionId);
-    // this.router.navigate([url]);
+  // navigateToSection(sectionId: string,url: string): void {
+  //   document.getElementById('closeNavBtn')?.click()
+  //   this.scrollService.scrollToSection(sectionId);
+  // }
 
+  navigateToSection(sectionId: string, route: string): void {
+    document.getElementById('closeNavBtn')?.click();
+
+    // REMOVE mobile-nav-active class from <body>
+    document.body.classList.remove('mobile-nav-active');
+
+    this.router.navigate([route]).then(() => {
+      setTimeout(() => {
+        this.scrollService.scrollToSection(sectionId);
+      }, 100);
+    });
   }
+  
 
   activeSection: string = '';
 

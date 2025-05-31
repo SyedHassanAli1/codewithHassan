@@ -1,4 +1,5 @@
-<section class="resume">
+<section id="resume-section" class="resume">
+
     <div class="container">
 
         <app-section-title [title]="'A Quick Look at My Path'"
@@ -43,17 +44,14 @@
                     </div>
                 </div>
 
-                <div class="text-center">
-                    <button class="download" type="submit" (click)="downloadCV()">
-                        Download Resume
-                        <i class="fas fa-download ms-1"></i>
-                    </button>
-                </div>
-                  
-
             </div>
-            
+
         </div>
 
     </div>
+
 </section>
+
+<div class="text-center">
+    <app-ng-button [title]="'Get Resume'" [icon]="'download'" (click)="downloadCV()"></app-ng-button>
+</div>

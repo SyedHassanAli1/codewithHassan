@@ -1,14 +1,58 @@
 .progress-bar-wrapper {
-    height: 6px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 8px;
-  }
-  
-  .progress-bar {
-    height: 100%;
-    background-color: #4CAF50;
-    transition: width 0.4s ease;
-  }
-  
+  height: 6px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.4s ease;
+}
+
+.custom-tabs {
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.custom-tab-item {
+  display: inline-block;
+}
+
+.custom-tab-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #00000054;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-tab-button.active {
+  color: #2c3e50;
+  background-color: #f0f0f0;
+}
+
+.custom-tab-button:hover,
+.custom-tab-button:focus {
+  color: #2c3e50;
+  outline: none;
+  background-color: #f0f0f0;
+}

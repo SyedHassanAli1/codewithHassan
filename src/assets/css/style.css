@@ -110,7 +110,7 @@ a:hover {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 6px solid #2c2f3f;
 }
 
 #header .profile h1 {
@@ -121,6 +121,15 @@ a:hover {
   -moz-text-align-last: center;
   text-align-last: center;
   font-family: "Poppins", sans-serif;
+}
+
+#header .profile p {
+  font-size: 18px;
+  margin: 0 30px;
+  padding: 0;
+  font-weight: 300;
+  -moz-text-align-last: left;
+  text-align-last: left;
 }
 
 #header .profile h1 a,
@@ -292,7 +301,7 @@ a:hover {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-/* #hero {
+/* #hero-section {
   width: 100%;
   height: 100vh;
   background: url("../img/desk-coverImg-color.jpg") top center;
@@ -300,7 +309,7 @@ a:hover {
 } */
 
 /* 
-#hero {
+#hero-section {
   width: 100%;
   height: 100vh;
   background: url("../img/desk-coverImg-color.jpg") center center no-repeat;
@@ -313,7 +322,7 @@ a:hover {
   color: white;
 } */
 
-#hero {
+#hero-section {
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -323,7 +332,7 @@ a:hover {
   overflow: hidden;
 }
 
-#hero:before {
+#hero-section:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
   position: absolute;
@@ -334,7 +343,7 @@ a:hover {
   z-index: 1;
 }
 
-#hero .hero-container {
+#hero-section .hero-container {
   position: relative;
   z-index: 2;
   min-width: 300px;
@@ -348,11 +357,11 @@ a:hover {
 }
 
 /* Animate Text */
-#hero .animate-container {
+#hero-section .animate-container {
   position: relative;
   z-index: 2;
   left: 300px;
-  bottom: 100px;
+  /* bottom: 100px; */
   padding: 20px;
 }
 
@@ -372,7 +381,7 @@ a:hover {
   font-size: 26px;
 }
 
-#hero h1 {
+#hero-section h1 {
   margin: 0 0 4px 0;
   font-size: clamp(1.8rem, 5vw, 2rem);
   font-weight: 700;
@@ -380,7 +389,7 @@ a:hover {
   color: #fff;
 }
 
-#hero p {
+#hero-section p {
   color: #fff;
   opacity: 90%;
   font-size: clamp(.9rem, 5vw, .9rem);
@@ -390,7 +399,7 @@ a:hover {
   letter-spacing: 1px;
 }
 
-#hero p span {
+#hero-section p span {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
@@ -398,26 +407,26 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
-  #hero {
+  #hero-section {
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 768px) {
-  #hero h2 {
+  #hero-section h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 
-  #hero .hero-container {
+  #hero-section .hero-container {
     left: 0;
     bottom: 160px;
   }
 
-  #hero .animate-container {
+  #hero-section .animate-container {
     left: 0;
-    bottom: 160px;
+    /* bottom: 160px; */
   }
 
   .animate-title {
@@ -427,6 +436,12 @@ a:hover {
 
   .animate-text {
     font-size: 16px;
+  }
+
+  .header-floating-icon {
+    position: relative;
+    height: 250px;
+    margin-left: -300px;
   }
 
 }
@@ -618,7 +633,8 @@ section {
 
 /* Tabs Animation */
 .skills .skill-item {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
+  margin-bottom: 20px;
 }
 
 .skills #skill-filters {
@@ -663,7 +679,16 @@ section {
   background-repeat: no-repeat !important;
 }
 
-/* Design Icons */
+.icon i.ico {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Code Icons */
 .ico.html {
   background: url("../img/logos/html.svg");
 }
@@ -690,22 +715,6 @@ section {
 
 .ico.react {
   background: url("../img/logos/react.svg");
-}
-
-.ico.git {
-  background: url("../img/logos/git.svg");
-}
-
-.ico.bit {
-  background: url("../img/logos/bit.svg");
-}
-
-.ico.jira {
-  background: url("../img/logos/jira.svg");
-}
-
-.ico.clickup {
-  background: url("../img/logos/clickup.svg");
 }
 
 .ico.wp {
@@ -743,6 +752,27 @@ section {
 
 .ico.canva {
   background: url("../img/logos/canva.svg");
+}
+
+/* Version Cotrols */
+.ico.vs {
+  background: url("../img/logos/vs.svg");
+}
+
+.ico.git {
+  background: url("../img/logos/git.svg");
+}
+
+.ico.bit {
+  background: url("../img/logos/bit.svg");
+}
+
+.ico.jira {
+  background: url("../img/logos/jira.svg");
+}
+
+.ico.clickup {
+  background: url("../img/logos/clickup.svg");
 }
 
 
@@ -1499,99 +1529,99 @@ section {
 
 /* Responsive */
 /* @media (max-width: 479px) {
-  #hero .hero-container {
+  #hero-section .hero-container {
     left: 0;
     bottom: 200px;
   }
 
-  #hero {
+  #hero-section {
     background: url("../img/cover-xs.jpg") top center;
     background-size: cover;
   }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
-  #hero .hero-container {
+  #hero-section .hero-container {
     left: 0;
     bottom: 200px;
   }
 
-  #hero {
+  #hero-section {
     background: url("../img/cover-sm.jpg") top center;
     background-size: cover;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  #hero .hero-container {
+  #hero-section .hero-container {
     left: 0;
     bottom: 200px;
   }
 
-  #hero {
+  #hero-section {
     background: url("../img/cover-md.jpg") top center;
     background-size: cover;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-  #hero .hero-container {
+  #hero-section .hero-container {
     left: 0;
     bottom: 200px;
   }
 
-  #hero {
+  #hero-section {
     background: url("../img/cover-lg.jpg") top center;
     background-size: cover;
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
-  #hero {
+  #hero-section {
     background: url("../img/cover-xl.jpg") top center;
     background-size: cover;
   }
 }
 
 @media (min-width: 1440px) {
-  #hero {
+  #hero-section {
     background: url("../img/cover-xxl.jpg") top center;
     background-size: cover;
   }
 } */
 
 @media (max-width: 479px) {
-  #hero {
+  #hero-section {
     background-image: url("../img/cover-xs.jpg");
   }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
-  #hero {
+  #hero-section {
     background-image: url("../img/cover-sm.jpg");
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  #hero {
+  #hero-section {
     background-image: url("../img/cover-md.jpg");
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-  #hero {
+  #hero-section {
     background-image: url("../img/cover-lg.jpg");
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
-  #hero {
+  #hero-section {
     background-image: url("../img/cover-xl.jpg");
   }
 }
 
 @media (min-width: 1440px) {
-  #hero {
+  #hero-section {
     background-image: url("../img/cover-xxl.jpg");
   }
 }

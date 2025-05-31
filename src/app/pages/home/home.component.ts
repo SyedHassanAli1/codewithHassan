@@ -9,77 +9,32 @@ import { ScrollService } from 'src/app/shared/scroll.service';
 })
 export class HomeComponent implements OnInit {
 
-
   showBackToTop: boolean = false;
 
-  @ViewChild('aboutSection') aboutSection!: ElementRef;
-  @ViewChild('skillsSection') skillsSection!: ElementRef;
-  @ViewChild('servicesSection') servicesSection!: ElementRef;
-
-  constructor(
-    public activatedRoute: ActivatedRoute,
-    public router: Router,
-    private scrollService: ScrollService
-  ) {
-
-  }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    let url = window.location.href;
-
-    if (url.includes('about')) {
-      this.navigateToSection('aboutUsDv');
-    }
-    else if (url.includes('skills')) {
-      this.navigateToSection('skillsDv');
-    }
-
-    else if (url.includes('resume')) {
-      this.navigateToSection('resumeDv');
-    }
-
-    else if (url.includes('services')) {
-      this.navigateToSection('servicesDv');
-    }
-
-    else if (url.includes('portfolio')) {
-      this.navigateToSection('portfolioDv');
-    }
-
-    else if (url.includes('facts')) {
-      this.navigateToSection('factsDv');
-    }
-
-    else if (url.includes('testimonials')) {
-      this.navigateToSection('testimonialDv');
-    }
-
-    else if (url.includes('contact')) {
-      this.navigateToSection('contactDv');
-    }
+    this.handleScrollOnRoute();
   }
 
-  navigateToSection(sectionId: string): void {
-    const elem = document.getElementById(sectionId)
+  handleScrollOnRoute() {
+    const path = this.router.url.replace('/', '') || 'hero-section';
+    const sectionMap: { [key: string]: string } = {
+      '': 'hero-section',
+      'about': 'about-section',
+      'skills': 'skills-section',
+      'resume': 'resume-section',
+      'portfolio': 'portfolio-section',
+      'services': 'services-section',
+      'contact': 'contact-section'
+
+    };
+
+    const sectionId = sectionMap[path];
     setTimeout(() => {
-      elem?.click();
-    }, 500)
-  }
-
-  scrollToSection(section: string) {
-    switch (section) {
-      case 'about':
-        this.aboutSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
-        break;
-      case 'skills':
-        this.skillsSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
-        break;
-      case 'services':
-        this.servicesSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
-        break;
-      default:
-        break;
-    }
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   }
 
 }

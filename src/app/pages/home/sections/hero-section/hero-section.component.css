@@ -3,9 +3,65 @@
     font-size: 26px;
 }
 
+.header-floating-icons {
+    position: relative;
+    height: 300px;
+}
+
+.header-floating-icons .icon {
+    position: absolute;
+}
+
+/* Optional: hover effect */
+.header-floating-icons .icon:hover {
+    transform: scale(1.9);
+}
+
+/* All icons positioned absolutely within .hero-section */
+.icon {
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.3s;
+    z-index: 2;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/* Custom positions */
+.html { top: 10%; left: 60%; animation-delay: 0s; }
+.css { top: 25%; left: 80%; animation-delay: 0.2s; }
+.vs { top: 40%; left: 65%; animation-delay: 0.4s; }
+.figma { top: 58%; left: 76%; animation-delay: 0.6s; }
+.ps { top: 70%; left: 58%; animation-delay: 0.8s; }
+.angular { top: 35%; left: 50%; animation-delay: 1s; }
+
+/* Floating animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
 @media (max-width: 768px) {
     ::ng-deep .typed-cursor {
         color: #fff;
         font-size: 16px;
+    }
+
+    .header-floating-icons {
+        position: relative;
+        height: 250px;
+        margin-left: -300px;
     }
 }

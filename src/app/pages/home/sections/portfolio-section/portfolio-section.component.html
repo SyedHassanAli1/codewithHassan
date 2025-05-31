@@ -1,4 +1,4 @@
-<section class="portfolio section-bg">
+<section id="portfolio-section" class="portfolio section-bg">
     <div class="container">
 
         <app-section-title [title]="'Project & Portfolio'"
@@ -19,7 +19,7 @@
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-4 col-md-6 portfolio-item" *ngFor="let p of portfolioItems"
+                <div class="col-lg-6 col-md-6 portfolio-item" *ngFor="let p of portfolioItems"
                     [ngClass]="'filter-' + p.filter">
                     <app-portfolio-card [Image]="p.image"></app-portfolio-card>
                 </div>

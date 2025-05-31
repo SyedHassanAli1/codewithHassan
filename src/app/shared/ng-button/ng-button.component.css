@@ -1,0 +1,25 @@
+.btn-ui {
+    padding: 12px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #000;
+    background: -moz-linear-gradient(135deg, #242424 0, #000 100%);
+    background: -webkit-linear-gradient(135deg, #242424 0, #000 100%);
+    background: linear-gradient(135deg, #242424 0, #000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d65d02", endColorstr="#ffa968", GradientType=1);
+    color: #fff;
+    font-size: 1.1rem;
+    transition: 1s;
+    /* box-shadow: 0 10px 45px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+}
+
+.btn-ui:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 10px 45px #00000012; */
+}

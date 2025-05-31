@@ -5,25 +5,14 @@
 <header id="header">
     <div class="d-flex flex-column">
 
-        <div class="profile mt-5">
-            <!-- <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle"> -->
-            <h1 class="text-light"><a href="index.html">Hassan's Space</a></h1>
-            <div class="social-links mt-4 text-center">
+        <div class="profile mt-4">
+            <!-- <img src="assets/img/profile_img.png" alt="" class="img-fluid rounded-circle"> -->
+             <div class="menu-title">\
+                 <h1 class="text-light"> <a href="index.html">Hassan's Space</a> </h1>
+                 <p class="text-light">Lorem Ipsum</p>
+             </div>
 
-                <!-- <a href="#" class="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                        viewBox="0 0 48 48">
-                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="4">
-                            <path
-                                d="M44 24a19.938 19.938 0 0 1-5.889 14.173A19.937 19.937 0 0 1 24 44C12.954 44 4 35.046 4 24a19.932 19.932 0 0 1 5.5-13.775A19.943 19.943 0 0 1 24 4a19.937 19.937 0 0 1 14.111 5.827A19.938 19.938 0 0 1 44 24" />
-                            <path d="M44 24c-2.918 0-10.968-1.1-18.173 2.063C18 29.5 12.333 34.832 9.863 38.147" />
-                            <path d="M16.5 5.454C19.63 8.343 26.46 15.698 29 23c2.54 7.302 3.48 16.28 4.06 18.835" />
-                            <path
-                                d="M4.154 21.5c3.778.228 13.779.433 20.179-2.3c6.4-2.733 11.907-7.76 13.796-9.355M5.5 31.613a20.076 20.076 0 0 0 9 9.991" />
-                            <path
-                                d="M4 24a19.932 19.932 0 0 1 5.5-13.775M24 4a19.943 19.943 0 0 0-14.5 6.225M32 5.664a20.037 20.037 0 0 1 6.111 4.163A19.938 19.938 0 0 1 44 24c0 2.462-.445 4.821-1.26 7M24 44a19.937 19.937 0 0 0 14.111-5.827" />
-                        </g>
-                    </svg></a> -->
+            <div class="social-links mt-4 text-center">
 
                 <a href="https://www.facebook.com/profile.php?id=100002755641968" class="facebook"><i
                         class="bx bxl-facebook"></i></a>
@@ -34,12 +23,15 @@
                 <a href="https://www.behance.net/syedhassanali1" class="google-plus"><i class="bx bxl-behance"></i></a>
 
             </div>
+            
         </div>
 
         <nav id="navbar" class="nav-menu navbar">
+
             <ul>
+
                 <!-- Hero Section -->
-                <li>
+                <li *ngIf="false">
                     <a (click)="navigateToSection('hero-section','')" class="nav-link scrollto"
                         [class.active]="activeSection === 'hero-section'">
                         <i class="fa-solid fa-house-chimney"></i> <span>Welcome Hub</span></a>
@@ -47,21 +39,21 @@
 
                 <!-- About Section -->
                 <li>
-                    <a (click)="navigateToSection('about-section','about')" class="nav-link scrollto" id="aboutUsDv"
+                    <a (click)="navigateToSection('about-section','about')" class="nav-link scrollto"
                         [class.active]="activeSection === 'about-section'">
                         <i class="fa-solid fa-circle-info"></i> <span>Who I Am</span></a>
                 </li>
 
                 <!-- Skills Section -->
                 <li>
-                    <a (click)="navigateToSection('skills-section','skills')" class="nav-link scrollto" id="skillsDv"
+                    <a (click)="navigateToSection('skills-section','skills')" class="nav-link scrollto"
                         [class.active]="activeSection === 'skills-section'">
                         <i class="fa-solid fa-rectangle-list"></i> <span>Tech Stack</span></a>
                 </li>
 
                 <!-- Resume Section -->
                 <li>
-                    <a (click)="navigateToSection('resume-section','resume')" class="nav-link scrollto" id="resumeDv"
+                    <a (click)="navigateToSection('resume-section','resume')" class="nav-link scrollto"
                         [class.active]="activeSection === 'resume-section'">
                         <i class="fa-solid fa-address-card"></i> <span>Growth Journey</span></a>
                 </li>
@@ -69,41 +61,28 @@
                 <!-- Portfolio Section -->
                 <li>
                     <a (click)="navigateToSection('portfolio-section','portfolio')" class="nav-link scrollto"
-                        id="portfolioDv" [class.active]="activeSection === 'portfolio-section'">
+                        [class.active]="activeSection === 'portfolio-section'">
                         <i class="fa-solid fa-briefcase"></i> <span>Featured Work</span></a>
-                </li>
-
-                <!-- Facts Section -->
-                <li *ngIf="false">
-                    <a (click)="navigateToSection('fact-section','facts')" class="nav-link scrollto" id="factsDv"
-                        [class.active]="activeSection === 'fact-section'">
-                        <i class="fa-solid fa-circle-info"></i> <span>Facts</span></a>
-                </li>
-
-                <!-- Testimonials Section -->
-                <li *ngIf="false">
-                    <a (click)="navigateToSection('testimonial-section','testimonials')" class="nav-link scrollto"
-                        id="testimonialDv" [class.active]="activeSection === 'testimonials-section'">
-                        <i class="fa-solid fa-circle-info"></i> <span>Testimonials</span></a>
                 </li>
 
                 <!-- Servcies Section -->
                 <li>
                     <a (click)="navigateToSection('services-section','services')" class="nav-link scrollto"
-                        id="servicesDv" [class.active]="activeSection === 'services-section'">
+                        [class.active]="activeSection === 'services-section'">
                         <i class="fa-solid fa-server"></i> <span>What I Offer</span></a>
                 </li>
 
                 <!-- Contact Section -->
                 <li>
-                    <a (click)="navigateToSection('contact-section','contact')" class="nav-link scrollto" id="contactDv"
+                    <a (click)="navigateToSection('contact-section','contact')" class="nav-link scrollto"
                         [class.active]="activeSection === 'contact-section'">
                         <i class="fa-solid fa-phone"></i> <span>Say Hello</span></a>
                 </li>
 
             </ul>
+
         </nav>
-        
+
     </div>
 </header>
 <!-- End Header -->

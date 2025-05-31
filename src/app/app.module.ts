@@ -15,7 +15,7 @@ import { FactsSectionComponent } from './pages/home/sections/facts-section/facts
 import { SkillsSectionComponent } from './pages/home/sections/skills-section/skills-section.component';
 import { ResumeSectionComponent } from './pages/home/sections/resume-section/resume-section.component';
 import { PortfolioSectionComponent } from './pages/home/sections/portfolio-section/portfolio-section.component';
-import { ServciesSectionComponent } from './pages/home/sections/servcies-section/servcies-section.component';
+import { ServicesSectionComponent } from './pages/home/sections/services-section/services-section.component';
 import { TestimonialsSectionComponent } from './pages/home/sections/testimonials-section/testimonials-section.component';
 import { ContactSectionComponent } from './pages/home/sections/contact-section/contact-section.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -25,6 +25,10 @@ import { TextareaComponent } from './shared/textarea/textarea.component';
 import { FormsModule } from '@angular/forms';
 import { SkillCardComponent } from './shared/skill-card/skill-card.component';
 import { FloatingButtonsComponent } from './shared/floating-buttons/floating-buttons.component';
+import { NgButtonComponent } from './shared/ng-button/ng-button.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -35,9 +39,9 @@ import { FloatingButtonsComponent } from './shared/floating-buttons/floating-but
     AboutSectionComponent,
     FactsSectionComponent,
     SkillsSectionComponent,
+    ServicesSectionComponent,
     ResumeSectionComponent,
     PortfolioSectionComponent,
-    ServciesSectionComponent,
     TestimonialsSectionComponent,
     ContactSectionComponent,
     SectionTitleComponent,
@@ -51,11 +55,13 @@ import { FloatingButtonsComponent } from './shared/floating-buttons/floating-but
     TextareaComponent,
     SkillCardComponent,
     FloatingButtonsComponent,
+    NgButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
     
   ],
   exports: [
@@ -67,7 +73,7 @@ import { FloatingButtonsComponent } from './shared/floating-buttons/floating-but
     SkillsSectionComponent,
     ResumeSectionComponent,
     PortfolioSectionComponent,
-    ServciesSectionComponent,
+    ServicesSectionComponent,
     TestimonialsSectionComponent,
     ContactSectionComponent,
   ],

@@ -1,10 +1,10 @@
-<section class="contact">
+<section id="contact-section" class="contact">
     <div class="container">
 
         <app-section-title [title]="'Got an Idea? Let’s Build It.'"
             [description]="'Whether you\'re looking for a designer, developer, or both—I\'m always open to new collaborations. Let’s connect and create something great.'"></app-section-title>
 
-        <div class="content-wrap">
+        <div class="content-wrap pt-2">
 
             <div class="row gy-4 justify-content-center" data-aos="fade-in">
 
@@ -84,12 +84,8 @@
                         </div>
 
                         <div class="text-center">
-                            <button type="submit">
-                                Send Message
-                                <i class="fas fa-paper-plane ms-1"></i>
-                            </button>
+                            <app-ng-button type="submit" [title]="'Send Message'" [icon]="'paper-plane'"></app-ng-button>
                         </div>
-
 
                     </form>
 

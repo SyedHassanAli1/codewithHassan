@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-servcies-section',
-  templateUrl: './servcies-section.component.html',
-  styleUrls: ['./servcies-section.component.css']
+  selector: 'app-services-section',
+  templateUrl: './services-section.component.html',
+  styleUrls: ['./services-section.component.css']
 })
-export class ServciesSectionComponent {
+export class ServicesSectionComponent {
 
   services = [
     {
