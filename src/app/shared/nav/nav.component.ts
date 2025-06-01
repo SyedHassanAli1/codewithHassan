@@ -51,4 +51,8 @@ export class NavComponent {
     this.activeSection = currentSectionId;
   }
 
+  goToGitHub() {
+    window.open('https://github.com/SyedHassanAli1', '_blank');
+  }
+  
 }

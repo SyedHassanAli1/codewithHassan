@@ -9,5 +9,6 @@ export class NgButtonComponent {
 
   @Input() title: string = ''
   @Input() icon: string = ''
+  @Input() type: string = ''
 
 }

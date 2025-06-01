@@ -19,9 +19,11 @@
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-6 col-md-6 portfolio-item" *ngFor="let p of portfolioItems"
-                    [ngClass]="'filter-' + p.filter">
+                <div class="col-lg-6 col-md-6 portfolio-item" *ngFor="let p of portfolioItems" [ngClass]="'filter-' + p.filter">
                     <app-portfolio-card [Image]="p.image"></app-portfolio-card>
+                    <div class="text-center">
+                        <h6 class="mt-3">{{p.title}}</h6>
+                    </div>
                 </div>
             </div>
 

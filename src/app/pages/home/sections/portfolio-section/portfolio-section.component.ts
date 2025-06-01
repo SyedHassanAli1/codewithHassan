@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class PortfolioSectionComponent {
 
   portfolioItems = [
-  { image: 'portfolio-1', filter: 'web' },
-  { image: 'portfolio-2', filter: 'web' },
-  { image: 'portfolio-3', filter: 'web' },
-  { image: 'portfolio-4', filter: 'web' },
-  { image: 'portfolio-5', filter: 'web' },
-  { image: 'portfolio-6', filter: 'app' },
-  { image: 'portfolio-7', filter: 'app' },
-  { image: 'portfolio-8', filter: 'app' },
-  { image: 'portfolio-9', filter: 'app' }
-];
+    { image: 'portfolio-1', filter: 'web', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-2', filter: 'web', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-3', filter: 'web', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-4', filter: 'web', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-5', filter: 'web', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-6', filter: 'app', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-7', filter: 'app', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-8', filter: 'app', title: 'Go2Sell - E-Commerce Platform' },
+    { image: 'portfolio-9', filter: 'app', title: 'Go2Sell - E-Commerce Platform' }
+  ];
 
 }

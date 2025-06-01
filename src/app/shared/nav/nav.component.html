@@ -3,14 +3,18 @@
 
 <!-- ======= Header ======= -->
 <header id="header">
-    <div class="d-flex flex-column">
 
+    <div class="hassan-nav">
+
+        <!-- Header -->
         <div class="profile mt-4">
+
             <!-- <img src="assets/img/profile_img.png" alt="" class="img-fluid rounded-circle"> -->
-             <div class="menu-title">\
-                 <h1 class="text-light"> <a href="index.html">Hassan's Space</a> </h1>
-                 <p class="text-light">Lorem Ipsum</p>
-             </div>
+
+            <div class="menu-title">\
+                <h1 class="text-light"> <a href="index.html">Syed Hassan Ali</a> </h1>
+                <p class="text-light">UI Dev with a UX Heart</p>
+            </div>
 
             <div class="social-links mt-4 text-center">
 
@@ -23,9 +27,10 @@
                 <a href="https://www.behance.net/syedhassanali1" class="google-plus"><i class="bx bxl-behance"></i></a>
 
             </div>
-            
+
         </div>
 
+        <!-- Menu -->
         <nav id="navbar" class="nav-menu navbar">
 
             <ul>
@@ -83,6 +88,13 @@
 
         </nav>
 
+        <div class="side-bottom">
+            <div class="text-center">
+                <app-ng-button [title]="'GitHub Profile'" [icon]="'github'" [type]="'Design2'" (click)="goToGitHub()"></app-ng-button>
+            </div>
+        </div>
+
     </div>
+
 </header>
 <!-- End Header -->
