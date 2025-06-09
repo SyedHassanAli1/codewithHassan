@@ -37,12 +37,12 @@
                         (click)="filterSkills('all')">All</button>
                 </li>
                 <li class="custom-tab-item">
-                    <button class="custom-tab-button" [class.active]="selectedCategory === 'frontend'"
-                        (click)="filterSkills('frontend')">Frontend</button>
-                </li>
-                <li class="custom-tab-item">
                     <button class="custom-tab-button" [class.active]="selectedCategory === 'uiux'"
                         (click)="filterSkills('uiux')">UI/UX</button>
+                </li>
+                <li class="custom-tab-item">
+                    <button class="custom-tab-button" [class.active]="selectedCategory === 'frontend'"
+                        (click)="filterSkills('frontend')">Frontend</button>
                 </li>
                 <li class="custom-tab-item">
                     <button class="custom-tab-button" [class.active]="selectedCategory === 'controls'"
@@ -56,10 +56,17 @@
 
             <!-- Cards -->
             <div class="row" data-aos="fade-up" data-aos-delay="100">
-                <div *ngFor="let ds of displayedSkills" class="col-12 col-md-3 skill-item"
+
+                <!-- <div *ngFor="let ds of displayedSkills" class="col-12 col-md-3 skill-item"
                     [ngClass]="'filter-' + ds.category">
                     <app-skill-card [icon]="ds.icon" [level]="ds.level" [skill]="ds.skill"></app-skill-card>
+                </div> -->
+
+                <div *ngFor="let ds of displayedSkills; let i = index" class="col-12 col-md-3 skill-item"
+                    [ngClass]="'filter-' + ds.category" [style.--i]="i">
+                    <app-skill-card [icon]="ds.icon" [level]="ds.level" [skill]="ds.skill"></app-skill-card>
                 </div>
+
             </div>
 
         </div>

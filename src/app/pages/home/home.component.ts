@@ -1,7 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
-import { ScrollService } from 'src/app/shared/scroll.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,16 +9,25 @@ import { ScrollService } from 'src/app/shared/scroll.service';
 })
 export class HomeComponent implements OnInit {
 
-  showBackToTop: boolean = false;
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.handleScrollOnRoute();
+
+    // Check if page was refreshed
+    if (performance.navigation.type === 1) {
+      this.router.navigateByUrl('/'); // redirect to home on refresh
+    }
+    
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.handleScrollOnRoute();
+      });
   }
 
   handleScrollOnRoute() {
     const path = this.router.url.replace('/', '') || 'hero-section';
+
     const sectionMap: { [key: string]: string } = {
       '': 'hero-section',
       'about': 'about-section',
@@ -27,14 +36,12 @@ export class HomeComponent implements OnInit {
       'portfolio': 'portfolio-section',
       'services': 'services-section',
       'contact': 'contact-section'
-
     };
 
     const sectionId = sectionMap[path];
     setTimeout(() => {
       const el = document.getElementById(sectionId);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    }, 200);
   }
-
 }

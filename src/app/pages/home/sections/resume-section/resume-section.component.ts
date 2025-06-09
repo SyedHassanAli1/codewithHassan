@@ -12,23 +12,23 @@ export class ResumeSectionComponent {
   resumeSections = [
 
     // Objective
-    {
-      title: 'Summary',
-      column: 'left',
-      items: [
-        {
-          heading: 'Alex Smith',
-          description: 'Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.',
-          list: [
-            'Portland par 127, Orlando, FL',
-            '(123) 456-7891',
-            'alice.barkley@example.com',
-          ],
-          duration: '',
-          location: '',
-        },
-      ],
-    },
+    // {
+    //   title: 'Summary',
+    //   column: 'left',
+    //   items: [
+    //     {
+    //       heading: 'Alex Smith',
+    //       description: 'Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.',
+    //       list: [
+    //         'Portland par 127, Orlando, FL',
+    //         '(123) 456-7891',
+    //         'alice.barkley@example.com',
+    //       ],
+    //       duration: '',
+    //       location: '',
+    //     },
+    //   ],
+    // },
 
     // Education
     {

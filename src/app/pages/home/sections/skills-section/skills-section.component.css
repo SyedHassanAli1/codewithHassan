@@ -56,3 +56,16 @@
   outline: none;
   background-color: #f0f0f0;
 }
+
+.skill-item {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInSkill 0.9s ease forwards;
+}
+
+@keyframes fadeInSkill {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

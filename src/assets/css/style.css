@@ -123,11 +123,11 @@ a:hover {
   -moz-text-align-last: center;
   text-align-last: center;
   font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 #header .profile p {
-  font-size: 18px;
+  font-size: 14px;
   /* margin: 0 30px; */
   padding: 4px;
   font-weight: 300;
@@ -148,7 +148,7 @@ a:hover {
   color: #fff;
   line-height: 1;
   padding: 8px 0;
-  margin-right: 14px;
+  /* margin-right: 14px; */
   border-radius: 50%;
   text-align: center;
   width: 36px;
@@ -157,6 +157,12 @@ a:hover {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 /* #header .profile .social-links a:hover {
