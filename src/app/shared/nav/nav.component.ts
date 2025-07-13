@@ -54,5 +54,14 @@ export class NavComponent {
   goToGitHub() {
     window.open('https://github.com/SyedHassanAli1', '_blank');
   }
+
+
+  downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'assets/Hassan_UIUX_Developer.pdf';  // path relative to assets folder
+    link.download = 'Hassan_UIUX_Developer.pdf';
+    link.click();
+  }
+
   
 }

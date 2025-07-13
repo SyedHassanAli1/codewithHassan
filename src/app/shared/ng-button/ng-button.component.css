@@ -1,6 +1,6 @@
 /* Design1 */
 .btn-ui {
-    padding: 12px 20px;
+    padding: 10px 14px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -8,7 +8,7 @@
     background-color: #000;
     color: #fff;
     border-color: #000;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
@@ -23,7 +23,7 @@
 
 /* Design2 */
 .btn-ui-two {
-    padding: 12px 20px;
+    padding: 10px 14px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -31,13 +31,36 @@
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 .btn-ui-two:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #ffffff;
+}
+
+
+/* Design3 */
+.btn-ui-three {
+    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-ui-three:hover {
     background-color: #000;
     color: #fff;
     border: 1px solid #ffffff;

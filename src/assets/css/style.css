@@ -224,7 +224,7 @@ a:hover {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 .nav-menu {
-  padding: 40px 0 40px 18px;
+  padding: 20px 0 20px 18px;
 }
 
 .nav-menu * {
@@ -280,8 +280,8 @@ a:hover {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 20px;
+  bottom: 20px;
   z-index: 9998;
   border: 0;
   font-size: 24px;
@@ -289,8 +289,8 @@ a:hover {
   outline: none !important;
   background-color: #000000;
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -307,11 +307,11 @@ a:hover {
   left: 0;
 }
 
-.side-bottom {
+/* .side-bottom {
   position: absolute;
   bottom: 30px;
   left: 50px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -1485,6 +1485,13 @@ section {
   section {
     padding: 0 8px;
   }
+
+  .side-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+  }
+
 }
 
 /*--------------------------------------------------------------
@@ -1624,7 +1631,7 @@ section {
 
   #hero-section .animate-container {
     left: 0;
-    bottom: -160px;
+    bottom: -140px;
   }
 }
 

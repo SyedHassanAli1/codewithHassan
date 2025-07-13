@@ -1,19 +1,16 @@
-#btn-back-to-top {
+.btn-top {
+    background: #149ddd;
+    color: #fff;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9999;
-}
-
-.btn-top {
-    background: #000;
-    color: #fff;
+    z-index: 1000;
+    border-radius: 50px;
 }
 
 .btn-whatsapp {
     position: fixed;
     bottom: 20px;
-    /* default when scroll button is hidden */
     right: 20px;
     z-index: 1000;
     background-color: #25D366;
@@ -32,18 +29,37 @@
 
 .btn-whatsapp.shifted {
     bottom: 90px;
-    /* when back-to-top is visible */
-}
-
-.btn-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
 }
 
 .btn-whatsapp:hover {
     transform: scale(1.1);
     background-color: #1ebe5b;
     text-decoration: none;
+}
+
+/* For Mobile */
+@media (max-width: 768px) {
+    .btn-top {
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+        background: #149ddd;
+        color: #fff;
+    }
+
+    .btn-whatsapp {
+        bottom: 100px;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+
+    .btn-whatsapp.shifted {
+        bottom: 160px;
+    }
+
+    .btn-top.shifted {
+        bottom: 90px;
+    }
 }

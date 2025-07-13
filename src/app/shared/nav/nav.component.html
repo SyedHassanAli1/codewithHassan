@@ -7,7 +7,7 @@
     <div class="hassan-nav">
 
         <!-- Header -->
-        <div class="profile mt-4">
+        <div class="profile mt-2">
 
             <!-- <img src="assets/img/profile_img.png" alt="" class="img-fluid rounded-circle"> -->
 
@@ -89,7 +89,9 @@
         </nav>
 
         <div class="side-bottom">
-            <div class="text-center">
+            <div class="ct-btn">
+                <app-ng-button [title]="'Get Resume'" [icon]="'download'" (click)="downloadCV()" [type]="'Design3'"></app-ng-button>
+
                 <app-ng-button [title]="'GitHub Profile'" [icon]="'github'" [type]="'Design2'" (click)="goToGitHub()"></app-ng-button>
             </div>
         </div>

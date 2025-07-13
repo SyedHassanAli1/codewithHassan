@@ -3,12 +3,10 @@
     font-weight: bold;
 }
 
-.download {
-    background: #fff;
-    border: 0;
-    padding: 8px 14px;
-    color: #000000;
-    transition: 0.4s;
-    border-radius: 4px;
-    font-size: 14px;
+.ct-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
