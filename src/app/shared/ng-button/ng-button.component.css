@@ -65,3 +65,25 @@
     color: #fff;
     border: 1px solid #ffffff;
 }
+
+/* Design3 */
+.btn-ui-four {
+    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-ui-four:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ffffff;
+}
