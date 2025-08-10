@@ -1,4 +1,4 @@
-<section id="portfolio-section" class="portfolio section-bg">
+<section #portfoliosSection id="portfolio-section" class="portfolio section-bg">
     <div class="container">
 
         <app-section-title [title]="'Project & Portfolio'"
@@ -6,29 +6,79 @@
 
         <div class="content-wrap">
 
-            <div class="row" data-aos="fade-up">
-                <div class="col-lg-12 d-flex justify-content-center">
-                    <ul id="portfolio-filters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-hero">UI Hero Shots</li>
-                        <li data-filter=".filter-web">Landing Lab</li>
-                        <li data-filter=".filter-dashboard">UX Dashboards</li>
-                        <li data-filter=".filter-app">App Interfaces</li>
-                        <li data-filter=".filter-other">Freestyle</li>
-                    </ul>
+            <div class="old_style" *ngIf="false">
+                <div class="row" data-aos="fade-up">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-filters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-hero">UI Hero Shots</li>
+                            <li data-filter=".filter-web">Landing Lab</li>
+                            <li data-filter=".filter-dashboard">UX Dashboards</li>
+                            <li data-filter=".filter-app">App Interfaces</li>
+                            <li data-filter=".filter-other">Freestyle</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-6 col-md-6 portfolio-item" *ngFor="let p of portfolioItems"
+                        [ngClass]="'filter-' + p.filter">
+                        <app-portfolio-card [Image]="p.image"></app-portfolio-card>
+                        <div class="text-center">
+                            <h6 class="mt-3">{{p.title}}</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-6 col-md-6 portfolio-item" *ngFor="let p of portfolioItems" [ngClass]="'filter-' + p.filter">
-                    <app-portfolio-card [Image]="p.image"></app-portfolio-card>
+            <!-- Custom Tabs -->
+            <ul class="custom-tabs mb-4" data-aos="fade-up">
+                <li class="custom-tab-item">
+                    <button class="custom-tab-button" [class.active]="selectedCategory === 'all'"
+                        (click)="filterPortfolios('all')">All</button>
+                </li>
+                <li class="custom-tab-item">
+                    <button class="custom-tab-button" [class.active]="selectedCategory === 'frontend'"
+                        (click)="filterPortfolios('web')">Landing Lab</button>
+                </li>
+                <li class="custom-tab-item">
+                    <button class="custom-tab-button" [class.active]="selectedCategory === 'uiux'"
+                        (click)="filterPortfolios('hero')">Hero Shots</button>
+                </li>
+                <li class="custom-tab-item">
+                    <button class="custom-tab-button" [class.active]="selectedCategory === 'controls'"
+                        (click)="filterPortfolios('dashboard')">UX Dashboards</button>
+                </li>
+                <li class="custom-tab-item">
+                    <button class="custom-tab-button" [class.active]="selectedCategory === 'other'"
+                        (click)="filterPortfolios('app')">App Interfaces</button>
+                </li>
+                <li class="custom-tab-item">
+                    <button class="custom-tab-button" [class.active]="selectedCategory === 'other'"
+                        (click)="filterPortfolios('other')">Freestyle</button>
+                </li>
+            </ul>
+
+            <!-- Cards -->
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="col-lg-6 col-md-6 portfolio-item" *ngFor="let pf of displayedPortfolios; let i = index" [ngClass]="'filter-' + pf.category" [style.--i]="i">
+                    
+                    <app-portfolio-card [Image]="pf.image"></app-portfolio-card>
                     <div class="text-center">
-                        <h6 class="mt-3">{{p.title}}</h6>
+                        <h6 class="mt-3">{{pf.title}}</h6>
                     </div>
+
                 </div>
+
             </div>
 
         </div>
 
     </div>
 </section>
+
+<div class="text-center" *ngIf="showSeeMore || showingAll">
+    <app-ng-button [title]="showingAll ? 'View Less' : 'View All'" [icon]="showingAll ? 'eye-slash' : 'eye'"
+        (click)="seeMore()" [type]="'Design1'"> </app-ng-button>
+</div>

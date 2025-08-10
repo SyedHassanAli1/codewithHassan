@@ -4,31 +4,7 @@
         <app-section-title [title]="'My Design & Dev Stack'"
             [description]="'From Figma to Angular and beyond—these are the tools, frameworks, and languages I use to turn ideas into reality.'"></app-section-title>
 
-        <!-- 1st Case -->
-        <div class="content-wrap" *ngIf="false">
-
-            <div class="row" data-aos="fade-up">
-                <div class="col-lg-12 d-flex justify-content-center">
-                    <ul id="skill-filters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-frontend">Frontend</li>
-                        <li data-filter=".filter-uiux">UI/UX</li>
-                        <li data-filter=".filter-controls">Version Controls</li>
-                        <li data-filter=".filter-other">Other</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row skills-content skill-container" data-aos="fade-up" data-aos-delay="100">
-                <div *ngFor="let s of myskills" class="col-12 col-md-3 skill-item" [ngClass]="'filter-' + s.category">
-                    <app-skill-card [icon]="s.icon" [level]="s.level" [skill]="s.skill"></app-skill-card>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Other Case -->
-        <div class="content-wrap" *ngIf="true">
+        <div class="content-wrap">
 
             <!-- Custom Tabs -->
             <ul class="custom-tabs mb-4" data-aos="fade-up">
@@ -57,13 +33,7 @@
             <!-- Cards -->
             <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-                <!-- <div *ngFor="let ds of displayedSkills" class="col-12 col-md-3 skill-item"
-                    [ngClass]="'filter-' + ds.category">
-                    <app-skill-card [icon]="ds.icon" [level]="ds.level" [skill]="ds.skill"></app-skill-card>
-                </div> -->
-
-                <div *ngFor="let ds of displayedSkills; let i = index" class="col-12 col-md-3 skill-item"
-                    [ngClass]="'filter-' + ds.category" [style.--i]="i">
+                <div *ngFor="let ds of displayedSkills; let i = index" class="col-12 col-md-3 skill-item" [ngClass]="'filter-' + ds.category" [style.--i]="i">
                     <app-skill-card [icon]="ds.icon" [level]="ds.level" [skill]="ds.skill"></app-skill-card>
                 </div>
 
