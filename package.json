@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "scss:watch": "sass --watch src/assets/style/style.scss:src/assets/style/style.css --style=expanded",
+    "scss:build": "sass src/assets/style/style.scss:src/assets/style/style.css --style=compressed"
   },
   "private": true,
   "dependencies": {

@@ -56,9 +56,9 @@ export class ContactSectionComponent {
     this.alertType = type;
 
     // Auto-hide after 5 seconds
-    setTimeout(() => {
-      this.showAlert = false;
-    }, 5000);
+    // setTimeout(() => {
+    //   this.showAlert = false;
+    // }, 5000);
   }
 
   closeAlert() {

@@ -1,76 +1,70 @@
-/* === Alert Overlay Container === */
 .custom-alert-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-/* === Alert Box === */
 .custom-alert-box {
-    position: relative;
-    max-width: 400px;
-    width: 90%;
-    background-color: #fff;
-    padding: 1.5rem 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-/* === Alert Content Layout === */
-.alert_content_wrap {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    text-align: left;
+.custom-alert-box .alert_content_wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  text-align: left;
 }
 
-.alert_content_wrap i {
-    font-size: 2rem;
+.custom-alert-box .alert_content_wrap i {
+  font-size: 2rem;
 }
 
-/* === Alert Content === */
-.alert_content h6 {
-    margin: 0 0 0.25rem 0;
+.custom-alert-box .alert_content h6 {
+  margin: 0 0 0.25rem 0;
 }
 
-.alert_content p {
-    margin: 0;
-    font-size: 1rem;
+.custom-alert-box .alert_content p {
+  margin: 0;
+  font-size: 1rem;
 }
 
-/* === Button to Close Alert === */
 .custom-alert-box button {
-    position: absolute;
-    top: 0.625rem;
-    right: 1rem;
-    font-size: 1.25rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #555;
+  position: absolute;
+  top: 0.625rem;
+  right: 1rem;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
 }
 
-/* === Status-Based Colors === */
 .success {
-    color: #198754;
+  color: #198754;
 }
 
 .success .alert_content p {
-    color: #198754;
+  color: #198754;
 }
 
 .error {
-    color: #dc3545;
+  color: #dc3545;
 }
 
 .error .alert_content p {
-    color: #dc3545;
+  color: #dc3545;
 }

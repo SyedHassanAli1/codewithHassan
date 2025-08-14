@@ -1,12 +1,12 @@
 .nav-link.active {
-    color: #f5f8fd;
-    font-weight: bold;
+  color: #f5f8fd;
+  font-weight: bold;
 }
 
 .ct-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

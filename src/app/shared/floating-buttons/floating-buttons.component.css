@@ -1,65 +1,68 @@
 .btn-top {
+  background: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .btn-top {
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
     background: #149ddd;
     color: #fff;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    border-radius: 50px;
+  }
+  .btn-top.shifted {
+    bottom: 90px;
+  }
 }
 
 .btn-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #25D366;
-    color: white;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: bottom 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .btn-whatsapp {
+    bottom: 100px;
+    width: 55px;
+    height: 55px;
     font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: bottom 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
+  }
 }
 
 .btn-whatsapp.shifted {
-    bottom: 90px;
+  bottom: 90px;
+}
+
+@media (max-width: 768px) {
+  .btn-whatsapp.shifted {
+    bottom: 160px;
+  }
 }
 
 .btn-whatsapp:hover {
-    transform: scale(1.1);
-    background-color: #1ebe5b;
-    text-decoration: none;
-}
-
-/* For Mobile */
-@media (max-width: 768px) {
-    .btn-top {
-        bottom: 20px;
-        width: 55px;
-        height: 55px;
-        font-size: 24px;
-        background: #149ddd;
-        color: #fff;
-    }
-
-    .btn-whatsapp {
-        bottom: 100px;
-        width: 55px;
-        height: 55px;
-        font-size: 24px;
-    }
-
-    .btn-whatsapp.shifted {
-        bottom: 160px;
-    }
-
-    .btn-top.shifted {
-        bottom: 90px;
-    }
+  transform: scale(1.1);
+  background-color: #1ebe5b;
+  text-decoration: none;
 }

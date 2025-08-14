@@ -1,0 +1,24 @@
+// ===================================================================
+// Variables
+// ===================================================================
+
+$nav-link-active-color: #f5f8fd;
+
+// ===================================================================
+// Components
+// ===================================================================
+
+.nav-link {
+    &.active {
+        color: $nav-link-active-color;
+        font-weight: bold;
+    }
+}
+
+.ct-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

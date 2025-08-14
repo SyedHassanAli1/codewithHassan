@@ -1,0 +1,86 @@
+// ===================================================================
+// Variables & Animations
+// ===================================================================
+
+$progress-bar-height: 6px;
+$progress-bar-bg: #eee;
+$progress-bar-fill-color: #4CAF50;
+$tab-font-size: 14px;
+$tab-font-weight: 600;
+$tab-text-color: #00000054;
+$tab-active-color: #2c3e50;
+$tab-active-bg: #f0f0f0;
+
+@keyframes fadeInSkill {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ===================================================================
+// Components
+// ===================================================================
+
+.progress-bar-wrapper {
+  height: $progress-bar-height;
+  background-color: $progress-bar-bg;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+
+  // Nesting the progress bar inside its wrapper
+  .progress-bar {
+    height: 100%;
+    background-color: $progress-bar-fill-color;
+    transition: width 0.4s ease;
+  }
+}
+
+.custom-tabs {
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.custom-tab-item {
+  display: inline-block;
+}
+
+.custom-tab-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: $tab-font-size;
+  font-weight: $tab-font-weight;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $tab-text-color;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+
+  // Nesting the active and hover states
+  &.active,
+  &:hover,
+  &:focus {
+    color: $tab-active-color;
+    background-color: $tab-active-bg;
+    outline: none;
+  }
+}
+
+.skill-item {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInSkill 0.9s ease forwards;
+}

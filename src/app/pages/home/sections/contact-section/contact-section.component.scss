@@ -1,0 +1,89 @@
+// ===================================================================
+// Variables
+// ===================================================================
+
+$alert-bg-color: #fff;
+$alert-padding: 1.5rem 2rem;
+$alert-border-radius: 0.75rem;
+$alert-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+$overlay-bg: rgba(0, 0, 0, 0.5);
+$close-btn-color: #555;
+$success-color: #198754;
+$error-color: #dc3545;
+
+// ===================================================================
+// Alert Styles
+// ===================================================================
+
+.custom-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 100vw;
+    height: 100vh;
+    background-color: $overlay-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.custom-alert-box {
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    background-color: $alert-bg-color;
+    padding: $alert-padding;
+    border-radius: $alert-border-radius;
+    box-shadow: $alert-box-shadow;
+    text-align: center;
+
+    .alert_content_wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        text-align: left;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    .alert_content {
+        h6 {
+            margin: 0 0 0.25rem 0;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    }
+
+    button {
+        position: absolute;
+        top: 0.625rem;
+        right: 1rem;
+        font-size: 1.25rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: $close-btn-color;
+    }
+}
+
+.success {
+    color: $success-color;
+
+    .alert_content p {
+        color: $success-color;
+    }
+}
+
+.error {
+    color: $error-color;
+
+    .alert_content p {
+        color: $error-color;
+    }
+}

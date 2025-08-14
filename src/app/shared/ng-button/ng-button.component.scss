@@ -1,0 +1,82 @@
+// ===================================================================
+// Variables & Mixins
+// ===================================================================
+
+// Reusable color variables for consistency
+$black: #000;
+$white: #fff;
+$hover-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+
+// A mixin for the common button styles
+@mixin button-base {
+    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: $hover-transition;
+}
+
+// ===================================================================
+// Button Components
+// ===================================================================
+
+.btn-ui {
+    // Use the mixin for base styles
+    @include button-base;
+
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+        border-color: $black;
+    }
+}
+
+.btn-ui-two {
+    @include button-base;
+
+    background-color: $white;
+    color: $black;
+    border: 1px solid $black;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+        border-color: $white;
+    }
+}
+
+.btn-ui-three {
+    @include button-base;
+
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+        border-color: $white;
+    }
+}
+
+.btn-ui-four {
+    @include button-base;
+
+    background-color: $black;
+    color: $white;
+    border: 1px solid $white;
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+        border-color: $white;
+    }
+}

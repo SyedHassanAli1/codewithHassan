@@ -1,0 +1,105 @@
+// ===================================================================
+// Variables and Animations
+// ===================================================================
+
+$cursor-color: #fff;
+$icon-color: white;
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+// ===================================================================
+// Global Styles
+// ===================================================================
+
+::ng-deep .typed-cursor {
+    color: $cursor-color;
+    font-size: 26px;
+
+    // Nesting the media query directly inside the selector
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.header-floating-icons {
+    position: relative;
+    height: 300px;
+
+    // Nesting the media query here as well
+    @media (max-width: 768px) {
+        height: 250px;
+        margin-left: -300px;
+    }
+
+    .icon {
+        position: absolute;
+
+        // Nesting the hover effect under the icon selector
+        &:hover {
+            transform: scale(1.9);
+        }
+    }
+}
+
+// ===================================================================
+// Floating Icons
+// ===================================================================
+
+.icon {
+    position: absolute;
+    font-size: 36px;
+    color: $icon-color;
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.3s;
+    z-index: 2;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.html {
+    top: 10%;
+    left: 60%;
+    animation-delay: 0s;
+}
+
+.css {
+    top: 25%;
+    left: 80%;
+    animation-delay: 0.2s;
+}
+
+.vs {
+    top: 40%;
+    left: 65%;
+    animation-delay: 0.4s;
+}
+
+.figma {
+    top: 58%;
+    left: 76%;
+    animation-delay: 0.6s;
+}
+
+.ps {
+    top: 70%;
+    left: 58%;
+    animation-delay: 0.8s;
+}
+
+.angular {
+    top: 35%;
+    left: 50%;
+    animation-delay: 1s;
+}

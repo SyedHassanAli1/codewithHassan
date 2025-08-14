@@ -1,3 +1,10 @@
+@keyframes fadeInSkill {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .progress-bar-wrapper {
   height: 6px;
   background-color: #eee;
@@ -6,7 +13,7 @@
   margin-top: 8px;
 }
 
-.progress-bar {
+.progress-bar-wrapper .progress-bar {
   height: 100%;
   background-color: #4CAF50;
   transition: width 0.4s ease;
@@ -45,27 +52,14 @@
   transition: all 0.3s ease-in-out;
 }
 
-.custom-tab-button.active {
+.custom-tab-button.active, .custom-tab-button:hover, .custom-tab-button:focus {
   color: #2c3e50;
   background-color: #f0f0f0;
-}
-
-.custom-tab-button:hover,
-.custom-tab-button:focus {
-  color: #2c3e50;
   outline: none;
-  background-color: #f0f0f0;
 }
 
 .skill-item {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeInSkill 0.9s ease forwards;
-}
-
-@keyframes fadeInSkill {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

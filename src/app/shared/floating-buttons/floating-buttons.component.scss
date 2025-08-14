@@ -1,0 +1,94 @@
+// ===================================================================
+// Variables & Mixins
+// ===================================================================
+
+$top-btn-color-desk: #000;
+$top-btn-color-mob: #149ddd;
+$top-btn-text-color: #fff;
+$whatsapp-color: #25D366;
+$whatsapp-hover-color: #1ebe5b;
+$whatsapp-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+// This mixin will help us apply mobile styles cleanly
+@mixin media-breakpoint-down($breakpoint) {
+    @if $breakpoint ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}
+
+// ===================================================================
+// Floating Action Buttons
+// ===================================================================
+
+.btn-top {
+    background: $top-btn-color-desk;
+    color: $top-btn-text-color;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    &.shifted {
+        // bottom: 90px;
+    }
+
+    @include media-breakpoint-down(md) {
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+        background: $top-btn-color-mob;
+        color: $top-btn-text-color;
+
+        &.shifted {
+            bottom: 90px;
+        }
+    }
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: $whatsapp-color;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $whatsapp-shadow;
+    transition: bottom 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+
+    // We can nest the responsive styles inside the main selector
+    @include media-breakpoint-down(md) {
+        bottom: 100px;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+
+    // Nesting the shifted class for clarity
+    &.shifted {
+        bottom: 90px;
+
+        @include media-breakpoint-down(md) {
+            bottom: 160px;
+        }
+    }
+
+    // Nesting the hover state
+    &:hover {
+        transform: scale(1.1);
+        background-color: $whatsapp-hover-color;
+        text-decoration: none;
+    }
+}
