@@ -10,3 +10,113 @@
   align-items: center;
   gap: 20px;
 }
+
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .custom-alert-overlay {
+    z-index: 10000;
+    left: 0;
+  }
+}
+
+.custom-alert-box {
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.custom-alert-box .alert_content_wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.custom-alert-box .alert_content_wrap i {
+  font-size: 2rem;
+}
+
+.custom-alert-box .alert_content {
+  text-align: center;
+}
+
+.custom-alert-box .alert_content h6 {
+  margin: 0 0 0.25rem 0;
+}
+
+.custom-alert-box .alert_content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.custom-alert-box .error i {
+  color: #dc3545;
+}
+
+.custom-alert-box .error .alert_content {
+  text-align: left;
+  color: #dc3545;
+}
+
+.alert_actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn-confirm {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-confirm.yes {
+  background: #000;
+  color: #fff;
+}
+
+.btn-confirm.yes:hover {
+  background: #000;
+}
+
+.btn-confirm.no {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-confirm.no:hover {
+  background: #e0e0e0;
+}
+
+.alert-close {
+  color: #555;
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

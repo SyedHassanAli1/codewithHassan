@@ -3,6 +3,25 @@
 // ===================================================================
 
 $nav-link-active-color: #f5f8fd;
+$alert-bg-color: #fff;
+$alert-padding: 1.5rem 2rem;
+$alert-border-radius: 0.75rem;
+$alert-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+$overlay-bg: rgba(0, 0, 0, 0.5);
+$close-btn-color: #555;
+$success-color: #198754;
+$error-color: #dc3545;
+$yes-btn-color: #000;
+$no-btn-color: #e0e0e0;
+
+// This mixin will help us apply mobile styles cleanly
+@mixin media-breakpoint-down($breakpoint) {
+    @if $breakpoint ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}
 
 // ===================================================================
 // Components
@@ -21,4 +40,119 @@ $nav-link-active-color: #f5f8fd;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+// ===================================================================
+// Alert Styles
+// ===================================================================
+
+.custom-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    @include media-breakpoint-down(md) {
+        z-index: 10000;
+        left: 0;
+    }
+}
+
+.custom-alert-box {
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    background-color: $alert-bg-color;
+    padding: $alert-padding;
+    border-radius: $alert-border-radius;
+    box-shadow: $alert-box-shadow;
+    text-align: center;
+
+    .alert_content_wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        text-align: left;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    .alert_content {
+        text-align: center;
+
+        h6 {
+            margin: 0 0 0.25rem 0;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    .error {
+        i {
+            color: $error-color;
+        }
+
+        .alert_content {
+            text-align: left;
+            color: $error-color;
+        }
+    }
+
+}
+
+.alert_actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.btn-confirm {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &.yes {
+        background: $yes-btn-color;
+        color: #fff;
+    }
+
+    &.yes:hover {
+        background: $yes-btn-color;
+    }
+
+    &.no {
+        background: $no-btn-color;
+        color: #333;
+    }
+
+    &.no:hover {
+        background: $no-btn-color;
+    }
+}
+
+.alert-close {
+    color: $close-btn-color;
+    position: absolute;
+    top: 6px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }

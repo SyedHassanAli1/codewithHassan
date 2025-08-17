@@ -5,7 +5,20 @@
 // Reusable color variables for consistency
 $black: #000;
 $white: #fff;
-$hover-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+$hover-transition1: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+$hover-transition2: transform 0.3s ease, box-shadow 0.3s ease;
+$translate-Y-none: translateY(0);
+$translate-Y: translateY(-4px);
+$box-shadow: 0 4px 12px rgba(152, 150, 150, 0.6);
+
+// This mixin will help us apply mobile styles cleanly
+@mixin media-breakpoint-down($breakpoint) {
+    @if $breakpoint ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}
 
 // A mixin for the common button styles
 @mixin button-base {
@@ -17,7 +30,7 @@ $hover-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
-    transition: $hover-transition;
+    transition: $hover-transition1;
 }
 
 // ===================================================================
@@ -42,13 +55,13 @@ $hover-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4
 .btn-ui-two {
     @include button-base;
 
-    background-color: $white;
-    color: $black;
-    border: 1px solid $black;
+    background-color: $black;
+    color: $white;
+    border: 1px solid $white;
 
     &:hover {
-        background-color: $black;
-        color: $white;
+        background-color: $white;
+        color: $black;
         border-color: $white;
     }
 }
@@ -70,13 +83,31 @@ $hover-transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4
 .btn-ui-four {
     @include button-base;
 
-    background-color: $black;
-    color: $white;
-    border: 1px solid $white;
+    background-color: $white;
+    color: $black;
+    transition: $hover-transition2;
 
     &:hover {
+        box-shadow: $box-shadow;
+        transform: $translate-Y;
+    }
+
+    &:active {
         background-color: $white;
         color: $black;
-        border-color: $white;
+        box-shadow: none;
+    }
+
+    @include media-breakpoint-down(md) {
+
+        &:hover {
+            box-shadow: $box-shadow;
+            transform: $translate-Y-none;
+        }
+
+        &:active {
+            box-shadow: none;
+            transform: $translate-Y-none;
+        }
     }
 }

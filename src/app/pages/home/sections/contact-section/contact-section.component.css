@@ -8,7 +8,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .custom-alert-overlay {
+    z-index: 9999;
+    left: 0;
+  }
 }
 
 .custom-alert-box {
@@ -43,14 +50,14 @@
 }
 
 .custom-alert-box button {
+  color: #555;
   position: absolute;
-  top: 0.625rem;
-  right: 1rem;
-  font-size: 1.25rem;
+  top: 6px;
+  right: 14px;
   background: none;
   border: none;
+  font-size: 24px;
   cursor: pointer;
-  color: #555;
 }
 
 .success {

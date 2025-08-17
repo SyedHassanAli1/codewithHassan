@@ -11,6 +11,15 @@ $close-btn-color: #555;
 $success-color: #198754;
 $error-color: #dc3545;
 
+// This mixin will help us apply mobile styles cleanly
+@mixin media-breakpoint-down($breakpoint) {
+    @if $breakpoint ==md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+}
+
 // ===================================================================
 // Alert Styles
 // ===================================================================
@@ -25,7 +34,12 @@ $error-color: #dc3545;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 999;
+
+    @include media-breakpoint-down(md) {
+        z-index: 9999;
+        left: 0;
+    }
 }
 
 .custom-alert-box {
@@ -61,14 +75,14 @@ $error-color: #dc3545;
     }
 
     button {
+        color: $close-btn-color;
         position: absolute;
-        top: 0.625rem;
-        right: 1rem;
-        font-size: 1.25rem;
+        top: 6px;
+        right: 14px;
         background: none;
         border: none;
+        font-size: 24px;
         cursor: pointer;
-        color: $close-btn-color;
     }
 }
 

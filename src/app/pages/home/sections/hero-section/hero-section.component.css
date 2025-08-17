@@ -28,6 +28,7 @@
   .header-floating-icons {
     height: 250px;
     margin-left: -300px;
+    margin-top: 20px;
   }
 }
 

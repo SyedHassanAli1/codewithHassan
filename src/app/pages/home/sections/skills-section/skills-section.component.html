@@ -33,7 +33,7 @@
             <!-- Cards -->
             <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-                <div *ngFor="let ds of displayedSkills; let i = index" class="col-12 col-md-3 skill-item" [ngClass]="'filter-' + ds.category" [style.--i]="i">
+                <div *ngFor="let ds of displayedSkills; let i = index" class="col-12 col-md-4 col-lg-3 skill-item" [ngClass]="'filter-' + ds.category" [style.--i]="i">
                     <app-skill-card [icon]="ds.icon" [level]="ds.level" [skill]="ds.skill"></app-skill-card>
                 </div>
 

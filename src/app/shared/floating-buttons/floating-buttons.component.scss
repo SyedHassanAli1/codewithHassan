@@ -46,6 +46,10 @@ $whatsapp-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 
         &.shifted {
             bottom: 90px;
+            background: #ffffff;
+            color: #000;
+            border: 1px solid #000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
     }
 }

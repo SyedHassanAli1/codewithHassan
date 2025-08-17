@@ -1,8 +1,8 @@
-<!-- ======= Mobile nav toggle button ======= -->
-<!-- <i class="bi bi-list mobile-nav-toggle d-xl-none"></i> -->
-
 <!-- ======= Header ======= -->
 <header id="header">
+
+    <i class="bi mobile-nav-toggle d-xl-none" [ngClass]="isMobileNavOpen ? 'bi-x' : 'bi-list'"
+        (click)="toggleMobileNav()"> </i>
 
     <div class="hassan-nav">
 
@@ -44,42 +44,42 @@
 
                 <!-- About Section -->
                 <li>
-                    <a (click)="navigateToSection('about-section','about')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('about-section','about')"
                         [class.active]="activeSection === 'about-section'">
                         <i class="fa-solid fa-circle-info"></i> <span>Who I Am</span></a>
                 </li>
 
                 <!-- Skills Section -->
                 <li>
-                    <a (click)="navigateToSection('skills-section','skills')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('skills-section','skills')"
                         [class.active]="activeSection === 'skills-section'">
                         <i class="fa-solid fa-rectangle-list"></i> <span>Tech Stack</span></a>
                 </li>
 
                 <!-- Resume Section -->
                 <li>
-                    <a (click)="navigateToSection('resume-section','resume')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('resume-section','resume')"
                         [class.active]="activeSection === 'resume-section'">
                         <i class="fa-solid fa-address-card"></i> <span>My Journey</span></a>
                 </li>
 
                 <!-- Portfolio Section -->
                 <li>
-                    <a (click)="navigateToSection('portfolio-section','portfolio')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('portfolio-section','portfolio')"
                         [class.active]="activeSection === 'portfolio-section'">
                         <i class="fa-solid fa-briefcase"></i> <span>Featured Work</span></a>
                 </li>
 
                 <!-- Servcies Section -->
                 <li>
-                    <a (click)="navigateToSection('services-section','services')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('services-section','services')"
                         [class.active]="activeSection === 'services-section'">
                         <i class="fa-solid fa-server"></i> <span>What I Offer</span></a>
                 </li>
 
                 <!-- Contact Section -->
                 <li>
-                    <a (click)="navigateToSection('contact-section','contact')" class="nav-link scrollto"
+                    <a (click)="navigateToSection('contact-section','contact')"
                         [class.active]="activeSection === 'contact-section'">
                         <i class="fa-solid fa-phone"></i> <span>Say Hello</span></a>
                 </li>
@@ -91,7 +91,7 @@
         <div class="side-bottom">
             <div class="ct-btn">
                 <app-ng-button [title]="'GitHub Profile'" [icon]="'github'" [type]="'Design2'" (click)="goToGitHub()"></app-ng-button>
-                <app-ng-button [title]="'Get Resume'" [icon]="'download'" (click)="downloadCV()" [type]="'Design4'"></app-ng-button>
+                <app-ng-button [title]="'Get Resume'" [icon]="'download'" [type]="'Design4'" (click)="downloadCV()"></app-ng-button>
             </div>
         </div>
 
@@ -99,3 +99,31 @@
 
 </header>
 <!-- End Header -->
+ 
+<!-- Custom Alert Box -->
+<div *ngIf="showAlert" class="custom-alert-overlay">
+    <div class="custom-alert-box">
+
+        <div [ngClass]="['alert_content_wrap', alertType]">
+            <!-- Icon (optional) -->
+            <i *ngIf="alertType === 'success'" class="bi bi-check-circle-fill success"></i>
+            <i *ngIf="alertType === 'error'" class="bi bi-exclamation-circle-fill error"></i>
+
+            <div class="alert_content">
+                <h6>{{ alertTitle }}</h6>
+                <p>{{ alertMessage }}</p>
+            </div>
+        </div>
+
+        <!-- Confirmation Buttons -->
+        <div *ngIf="alertType === 'confirm'" class="alert_actions">
+            <button class="btn-confirm yes" (click)="confirmDownload(true)">Yes</button>
+            <button class="btn-confirm no" (click)="confirmDownload(false)">No</button>
+        </div>
+
+        <!-- Close button for success/error -->
+        <button *ngIf="alertType !== 'confirm'" class="alert-close" (click)="closeAlert()">×</button>
+    </div>
+</div>
+
+
