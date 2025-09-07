@@ -14,6 +14,7 @@ import { HeroSectionComponent } from './pages/home/sections/hero-section/hero-se
 import { FactsSectionComponent } from './pages/home/sections/facts-section/facts-section.component';
 import { SkillsSectionComponent } from './pages/home/sections/skills-section/skills-section.component';
 import { ResumeSectionComponent } from './pages/home/sections/resume-section/resume-section.component';
+import { CertificationSectionComponent } from './pages/home/sections/certification-section/certification-section.component';
 import { PortfolioSectionComponent } from './pages/home/sections/portfolio-section/portfolio-section.component';
 import { ServicesSectionComponent } from './pages/home/sections/services-section/services-section.component';
 import { TestimonialsSectionComponent } from './pages/home/sections/testimonials-section/testimonials-section.component';
@@ -27,6 +28,7 @@ import { SkillCardComponent } from './shared/skill-card/skill-card.component';
 import { FloatingButtonsComponent } from './shared/floating-buttons/floating-buttons.component';
 import { NgButtonComponent } from './shared/ng-button/ng-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CertificateCardComponent } from './shared/certificate-card/certificate-card.component';
 
 
 
@@ -56,13 +58,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SkillCardComponent,
     FloatingButtonsComponent,
     NgButtonComponent,
+    CertificationSectionComponent,
+    CertificateCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule
-    
   ],
   exports: [
     BrowserModule,

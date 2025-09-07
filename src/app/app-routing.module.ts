@@ -6,6 +6,7 @@ import { SkillsSectionComponent } from './pages/home/sections/skills-section/ski
 import { ServicesSectionComponent } from './pages/home/sections/services-section/services-section.component';
 import { PortfolioSectionComponent } from './pages/home/sections/portfolio-section/portfolio-section.component';
 import { ResumeSectionComponent } from './pages/home/sections/resume-section/resume-section.component';
+import { CertificationSectionComponent } from './pages/home/sections/certification-section/certification-section.component';
 import { FactsSectionComponent } from './pages/home/sections/facts-section/facts-section.component';
 import { TestimonialsSectionComponent } from './pages/home/sections/testimonials-section/testimonials-section.component';
 import { ContactSectionComponent } from './pages/home/sections/contact-section/contact-section.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'services', component: HomeComponent },
   { path: 'portfolio', component: HomeComponent },
   { path: 'resume', component: HomeComponent },
+  { path: 'certification', component: CertificationSectionComponent },
   { path: 'testimonials', component: HomeComponent },
   { path: 'facts', component: HomeComponent },
   { path: 'contact', component: HomeComponent },

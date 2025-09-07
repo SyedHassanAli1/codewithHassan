@@ -1,0 +1,27 @@
+<section id="certification-section" class="certification">
+    <div class="container">
+
+        <app-section-title [title]="'Certified Skills'"
+            [description]="'A curated collection of certifications that reflect my dedication to continuous learning and professional growth in design and development.'"></app-section-title>
+
+        <div class="content-wrap">
+
+            <div class="swiper myFeatureSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let cert of certificates">
+                        <div class="cert-card">
+                            <app-certificate-card [Image]="cert.image" [alt]="cert.title"></app-certificate-card>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <!-- <div class="swiper-button-next"></div> <div class="swiper-button-prev"></div> -->
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
