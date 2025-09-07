@@ -83,14 +83,12 @@ export class NavComponent {
   //   this.scrollService.scrollToSection(sectionId);
   // }
 
-
-
   downloadCount = 0; // track number of downloads
   private pendingDownload: boolean = false; // to handle confirmation
 
   downloadCV() {
-    if (this.downloadCount >= 2) {
-      this.showCustomAlert('You have already downloaded the resume 2 times.', 'error', 'Limit Reached');
+    if (this.downloadCount >= 1) {
+      this.showCustomAlert('You have already downloaded the resume 1 time.', 'error', 'Limit Reached');
       return;
     }
 
@@ -127,6 +125,5 @@ export class NavComponent {
     this.showAlert = false;
     this.pendingDownload = false;
   }
-
 
 }

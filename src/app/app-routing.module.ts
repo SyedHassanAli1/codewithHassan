@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'services', component: HomeComponent },
   { path: 'portfolio', component: HomeComponent },
   { path: 'resume', component: HomeComponent },
-  { path: 'certification', component: CertificationSectionComponent },
+  { path: 'certification', component: HomeComponent },
   { path: 'testimonials', component: HomeComponent },
   { path: 'facts', component: HomeComponent },
   { path: 'contact', component: HomeComponent },

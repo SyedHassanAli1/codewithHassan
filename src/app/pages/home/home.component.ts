@@ -9,7 +9,7 @@ import { filter } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     if (performance.navigation.type === 1) {
       this.router.navigateByUrl('/'); // redirect to home on refresh
     }
-    
+
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
       'about': 'about-section',
       'skills': 'skills-section',
       'resume': 'resume-section',
+      'certification': 'certification-section',
       'portfolio': 'portfolio-section',
       'services': 'services-section',
       'contact': 'contact-section'

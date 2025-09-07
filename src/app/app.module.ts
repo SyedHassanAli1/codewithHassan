@@ -30,8 +30,6 @@ import { NgButtonComponent } from './shared/ng-button/ng-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CertificateCardComponent } from './shared/certificate-card/certificate-card.component';
 
-
-
 @NgModule({
   declarations: [
     HomeComponent,
@@ -75,6 +73,7 @@ import { CertificateCardComponent } from './shared/certificate-card/certificate-
     FactsSectionComponent,
     SkillsSectionComponent,
     ResumeSectionComponent,
+    CertificateCardComponent,
     PortfolioSectionComponent,
     ServicesSectionComponent,
     TestimonialsSectionComponent,
