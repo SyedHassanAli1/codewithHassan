@@ -53,7 +53,7 @@
                 <li>
                     <a (click)="navigateToSection('skills-section','skills')"
                         [class.active]="activeSection === 'skills-section'">
-                        <i class="fa-solid fa-rectangle-list"></i> <span>Tech Stack</span></a>
+                        <i class="fa-solid fa-laptop-code"></i> <span>Tech Stack</span></a>
                 </li>
 
                 <!-- Resume Section -->
@@ -63,18 +63,25 @@
                         <i class="fa-solid fa-address-card"></i> <span>My Journey</span></a>
                 </li>
 
+                <!-- Certifications Section -->
+                <li>
+                    <a (click)="navigateToSection('certification-section','certification')"
+                        [class.active]="activeSection === 'certification-section'">
+                        <i class="fa-solid fa-medal"></i> <span>Certifications</span></a>
+                </li>
+
                 <!-- Portfolio Section -->
                 <li>
                     <a (click)="navigateToSection('portfolio-section','portfolio')"
                         [class.active]="activeSection === 'portfolio-section'">
-                        <i class="fa-solid fa-briefcase"></i> <span>Featured Work</span></a>
+                        <i class="fa-solid fa-folder-open"></i> <span>Portfolio</span></a>
                 </li>
 
                 <!-- Servcies Section -->
                 <li>
                     <a (click)="navigateToSection('services-section','services')"
                         [class.active]="activeSection === 'services-section'">
-                        <i class="fa-solid fa-server"></i> <span>What I Offer</span></a>
+                        <i class="fa-solid fa-screwdriver-wrench"></i> <span>Services</span></a>
                 </li>
 
                 <!-- Contact Section -->
@@ -90,8 +97,10 @@
 
         <div class="side-bottom">
             <div class="ct-btn">
-                <app-ng-button [title]="'GitHub Profile'" [icon]="'github'" [type]="'Design2'" (click)="goToGitHub()"></app-ng-button>
-                <app-ng-button [title]="'Get Resume'" [icon]="'download'" [type]="'Design4'" (click)="downloadCV()"></app-ng-button>
+                <app-ng-button [title]="'GitHub Profile'" [icon]="'github'" [type]="'Design2'"
+                    (click)="goToGitHub()"></app-ng-button>
+                <app-ng-button [title]="'Get Resume'" [icon]="'download'" [type]="'Design4'"
+                    (click)="downloadCV()"></app-ng-button>
             </div>
         </div>
 
@@ -99,7 +108,7 @@
 
 </header>
 <!-- End Header -->
- 
+
 <!-- Custom Alert Box -->
 <div *ngIf="showAlert" class="custom-alert-overlay">
     <div class="custom-alert-box">
@@ -125,5 +134,3 @@
         <button *ngIf="alertType !== 'confirm'" class="alert-close" (click)="closeAlert()">×</button>
     </div>
 </div>
-
-
