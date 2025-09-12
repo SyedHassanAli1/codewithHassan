@@ -15,6 +15,7 @@ export class CertificationSectionComponent {
     { image: 'google_one', title: 'Google - Found. of User Experience (UX) Design' },
     { image: 'microsoft_one', title: 'Microsoft - Fundamentals of UIUX' },
     { image: 'microsoft_two', title: 'Microsoft - Designing for User Experience' },
+    { image: 'microsoft_three', title: 'Microsoft - User Interface Design and Prototyping' },
 
     { image: 'linkedIn_agile', title: 'LinkedIn - Agile UX Research' },
     { image: 'linkedIn_microInteractions', title: 'LinkedIn - Microinteractions with Figma' },
