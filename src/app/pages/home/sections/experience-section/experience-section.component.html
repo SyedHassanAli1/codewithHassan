@@ -1,0 +1,61 @@
+<section id="experience-section" class="experience">
+
+    <div class="container">
+
+        <app-section-title [title]="'Quick Look at My Path'"
+            [description]="'A timeline of education, experience, and milestones that shaped my journey in design and development.'"></app-section-title>
+
+        <div class="content-wrap">
+
+            <div class="row" *ngIf="isScreen == 1">
+
+                <!-- Left Column -->
+                <div class="col-lg-6 col-12" data-aos="fade-up">
+                    <div *ngFor="let section of leftColumnSections">
+                        <h3 class="resume-title">{{ section.title }}</h3>
+                        <div class="resume-item" *ngFor="let item of section.items">
+                            <h4>{{ item.heading }}</h4>
+                            <h5 *ngIf="item.duration">{{ item.duration }}</h5>
+                            <p *ngIf="item.location"><em>{{ item.location }}</em></p>
+                            <p *ngIf="item.description">{{ item.description }}</p>
+                            <ul *ngIf="item.list && item.list.length > 0">
+                                <li *ngFor="let listItem of item.list">{{ listItem }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-6 col-12 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100"
+                    *ngIf="showRightColumn || screenWidth > 991">
+                    <div *ngFor="let section of rightColumnSections">
+                        <h3 class="resume-title">{{ section.title }}</h3>
+                        <div class="resume-item" *ngFor="let item of section.items">
+                            <h4>{{ item.heading }}</h4>
+                            <h5 *ngIf="item.duration">{{ item.duration }}</h5>
+                            <p *ngIf="item.location"><em>{{ item.location }}</em></p>
+                            <p *ngIf="item.description">{{ item.description }}</p>
+                            <ul *ngIf="item.list && item.list.length > 0">
+                                <li *ngFor="let listItem of item.list">{{ listItem }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View More Button (visible only on mobile) -->
+                <div class="text-center d-lg-none mt-3">
+
+                    <app-ng-button [title]="showRightColumn ? 'Hide Experience' : 'View Experience'"
+                        [icon]="showRightColumn ? 'eye-slash' : 'eye'" (click)="showRightColumn = !showRightColumn"
+                        [type]="'Design1'"></app-ng-button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

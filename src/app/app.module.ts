@@ -29,6 +29,7 @@ import { FloatingButtonsComponent } from './shared/floating-buttons/floating-but
 import { NgButtonComponent } from './shared/ng-button/ng-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CertificateCardComponent } from './shared/certificate-card/certificate-card.component';
+import { ExperienceSectionComponent } from './pages/home/sections/experience-section/experience-section.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { CertificateCardComponent } from './shared/certificate-card/certificate-
     NgButtonComponent,
     CertificationSectionComponent,
     CertificateCardComponent,
+    ExperienceSectionComponent,
   ],
   imports: [
     BrowserModule,
