@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
       '': 'hero-section',
       'about': 'about-section',
       'skills': 'skills-section',
-      // 'resume': 'resume-section',
       'experience': 'experience-section',
       'certification': 'certification-section',
       'portfolio': 'portfolio-section',

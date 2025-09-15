@@ -12,8 +12,8 @@
                 <!-- Left Column -->
                 <div class="col-lg-6 col-12" data-aos="fade-up">
                     <div *ngFor="let section of leftColumnSections">
-                        <h3 class="resume-title">{{ section.title }}</h3>
-                        <div class="resume-item" *ngFor="let item of section.items">
+                        <h3 class="experience-title">{{ section.title }}</h3>
+                        <div class="experience-item" *ngFor="let item of section.items">
                             <h4>{{ item.heading }}</h4>
                             <h5 *ngIf="item.duration">{{ item.duration }}</h5>
                             <p *ngIf="item.location"><em>{{ item.location }}</em></p>
@@ -30,8 +30,8 @@
                 <div class="col-lg-6 col-12 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100"
                     *ngIf="showRightColumn || screenWidth > 991">
                     <div *ngFor="let section of rightColumnSections">
-                        <h3 class="resume-title">{{ section.title }}</h3>
-                        <div class="resume-item" *ngFor="let item of section.items">
+                        <h3 class="experience-title">{{ section.title }}</h3>
+                        <div class="experience-item" *ngFor="let item of section.items">
                             <h4>{{ item.heading }}</h4>
                             <h5 *ngIf="item.duration">{{ item.duration }}</h5>
                             <p *ngIf="item.location"><em>{{ item.location }}</em></p>

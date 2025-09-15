@@ -13,7 +13,7 @@ import { AboutSectionComponent } from './pages/home/sections/about-section/about
 import { HeroSectionComponent } from './pages/home/sections/hero-section/hero-section.component';
 import { FactsSectionComponent } from './pages/home/sections/facts-section/facts-section.component';
 import { SkillsSectionComponent } from './pages/home/sections/skills-section/skills-section.component';
-import { ResumeSectionComponent } from './pages/home/sections/resume-section/resume-section.component';
+import { ExperienceSectionComponent } from './pages/home/sections/experience-section/experience-section.component';
 import { CertificationSectionComponent } from './pages/home/sections/certification-section/certification-section.component';
 import { PortfolioSectionComponent } from './pages/home/sections/portfolio-section/portfolio-section.component';
 import { ServicesSectionComponent } from './pages/home/sections/services-section/services-section.component';
@@ -29,7 +29,6 @@ import { FloatingButtonsComponent } from './shared/floating-buttons/floating-but
 import { NgButtonComponent } from './shared/ng-button/ng-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CertificateCardComponent } from './shared/certificate-card/certificate-card.component';
-import { ExperienceSectionComponent } from './pages/home/sections/experience-section/experience-section.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,6 @@ import { ExperienceSectionComponent } from './pages/home/sections/experience-sec
     FactsSectionComponent,
     SkillsSectionComponent,
     ServicesSectionComponent,
-    ResumeSectionComponent,
     PortfolioSectionComponent,
     TestimonialsSectionComponent,
     ContactSectionComponent,
@@ -74,7 +72,6 @@ import { ExperienceSectionComponent } from './pages/home/sections/experience-sec
     AboutSectionComponent,
     FactsSectionComponent,
     SkillsSectionComponent,
-    ResumeSectionComponent,
     CertificateCardComponent,
     PortfolioSectionComponent,
     ServicesSectionComponent,
