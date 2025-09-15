@@ -664,6 +664,10 @@ section {
   background: url("../img/logos/css.svg");
 }
 
+.ico.sass {
+  background: url("../img/logos/sass.svg");
+}
+
 .ico.tailwind-css {
   background: url("../img/logos/tailwind-css.svg");
 }
@@ -1543,7 +1547,7 @@ section {
 /* Responsive */
 @media (max-width: 499px) {
   #hero-section {
-    background-image: url("../img/cover-xs2.jpg");
+    background-image: url("../img/cover3/cover-xs2.jpg");
   }
 
   #hero-section .animate-container {
@@ -1554,13 +1558,13 @@ section {
 
 @media (min-width: 480px) and (max-width: 767px) {
   #hero-section {
-    background-image: url("../img/cover-sm2.jpg");
+    background-image: url("../img/cover3/cover-sm2.jpg");
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   #hero-section {
-    background-image: url("../img/cover-md2.jpg");
+    background-image: url("../img/cover3/cover-md2.jpg");
   }
 
   #hero-section .animate-container {
@@ -1571,7 +1575,7 @@ section {
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   #hero-section {
-    background-image: url("../img/cover-lg2.jpg");
+    background-image: url("../img/cover3/cover-lg2.jpg");
   }
 
   #hero-section .animate-container {
@@ -1582,12 +1586,12 @@ section {
 
 @media (min-width: 1280px) and (max-width: 1439px) {
   #hero-section {
-    background-image: url("../img/cover-xl2.jpg");
+    background-image: url("../img/cover3/cover-xl2.jpg");
   }
 }
 
 @media (min-width: 1440px) {
   #hero-section {
-    background-image: url("../img/cover-xxl2.jpg");
+    background-image: url("../img/cover3/cover-xxl2.jpg");
   }
 }

@@ -25,10 +25,10 @@ export class AboutSectionComponent {
     ]
   ];
 
-  descriptionPart1: string = `I’m a UI/UX Designer and Frontend Developer who genuinely enjoys solving real problems through clean, thoughtful design. Over the past few years, I’ve worked on a variety of projects—designing and building websites, web apps, and user interfaces that are not only visually appealing but also intuitive to use.`;
+  descriptionPart1: string = `I specialize in designing and developing digital products that are both visually appealing and effortless to use. Over the years, I’ve contributed to diverse projects building websites, web apps, and user interfaces that balance user needs with business goals.`;
 
-  descriptionPart2: string = `My goal is simple: create experiences that feel effortless for users and make sense from a business perspective. I enjoy the process—from sketching early ideas to seeing the final product live and working. I believe good design is less about trends and more about clarity, consistency, and solving the right problems.`;
+  descriptionPart2: string = `For me, design isn’t about chasing trends it’s about clarity, consistency, and solving real problems. I enjoy the entire journey: from brainstorming ideas to launching polished products.`;
 
-  descriptionPart3: string = `I'm always learning, always curious, and I love collaborating with others to bring ideas to life. Whether it's a small landing page or a full-scale application, I aim to create work that I’m proud of and that users actually enjoy interacting with.`;
+  descriptionPart3: string = `Curious by nature and driven by learning, I thrive in collaborative environments where ideas turn into impactful solutions. Whether it’s a simple landing page or a complex application, I aim to deliver work that leaves a lasting impression.`;
 
 }

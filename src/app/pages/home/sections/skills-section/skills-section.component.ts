@@ -18,29 +18,30 @@ export class SkillsSectionComponent {
   skills: Skill[] = [
     // Frontend
     { icon: 'html', level: 'Expert', skill: 'HTML5', category: 'frontend' },
-    { icon: 'css', level: 'Expert', skill: 'CSS3, SCSS', category: 'frontend' },
-    { icon: 'js', level: 'Intermediate', skill: 'JavaScript', category: 'frontend' },
+    { icon: 'css', level: 'Expert', skill: 'CSS3', category: 'frontend' },
+    { icon: 'sass', level: 'Advanced', skill: 'Sass/SCSS', category: 'frontend' },
+    { icon: 'tailwind-css', level: 'Advanced', skill: 'Tailwind CSS', category: 'frontend' },
+    { icon: 'angular', level: 'Advanced', skill: 'Angular JS', category: 'frontend' },
+    { icon: 'react', level: 'Basics', skill: 'React JS', category: 'frontend' },
+    { icon: 'js', level: 'Advanced', skill: 'JavaScript', category: 'frontend' },
     { icon: 'jquery', level: 'Advanced', skill: 'JQuery & Plugins', category: 'frontend' },
-    { icon: 'angular', level: 'Intermediate', skill: 'Angular JS', category: 'frontend' },
-    { icon: 'react', level: 'Intermediate', skill: 'React JS', category: 'frontend' },
-    { icon: 'tailwind-css', level: 'Expert', skill: 'Tailwind CSS', category: 'frontend' },
     { icon: 'wp', level: 'Advanced', skill: 'WordPress', category: 'frontend' },
 
     // UI/UX
-    { icon: 'ps', level: 'Advanced', skill: 'Adobe Photoshop', category: 'uiux' },
-    { icon: 'ai', level: 'Advanced', skill: 'Adobe Illustrator', category: 'uiux' },
-    { icon: 'ae', level: 'Intermediate', skill: 'Adobe AfterEffects', category: 'uiux' },
-    { icon: 'xd', level: 'Expert', skill: 'Adobe XD', category: 'uiux' },
     { icon: 'figma', level: 'Expert', skill: 'Figma', category: 'uiux' },
+    { icon: 'xd', level: 'Expert', skill: 'Adobe XD', category: 'uiux' },
     { icon: 'sketch', level: 'Advanced', skill: 'Sketch', category: 'uiux' },
     { icon: 'miro', level: 'Advanced', skill: 'Miro', category: 'uiux' },
+    { icon: 'ps', level: 'Advanced', skill: 'Adobe Photoshop', category: 'uiux' },
+    { icon: 'ai', level: 'Intermediate', skill: 'Adobe Illustrator', category: 'uiux' },
+    { icon: 'ae', level: 'Intermediate', skill: 'Adobe AfterEffects', category: 'uiux' },
     { icon: 'canva', level: 'Expert', skill: 'Canva', category: 'uiux' },
 
     // Version Control
     { icon: 'git', level: 'Advanced', skill: 'GitHub', category: 'controls' },
     { icon: 'bit', level: 'Advanced', skill: 'Bit Bucket', category: 'controls' },
-    { icon: 'jira', level: 'Expert', skill: 'Jira', category: 'controls' },
-    { icon: 'clickup', level: 'Expert', skill: 'Clickup', category: 'controls' },
+    { icon: 'jira', level: 'Advanced', skill: 'Jira', category: 'controls' },
+    { icon: 'clickup', level: 'Advanced', skill: 'Clickup', category: 'controls' },
 
     // Other
     { icon: 'photography', level: 'Expert', skill: 'Photography', category: 'other' },

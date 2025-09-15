@@ -1,0 +1,52 @@
+Who I am Section:
+Section Heading : Hi, I'm Hassan
+Sub Desc: With a strong foundation in UI/UX and frontend development, I blend aesthetics with functionality to build meaningful digital products. Here's a quick dive into who I am and what drives me.
+
+A UI/UX Designer & Front-End Developer blending aesthetics with functionality to craft meaningful digital experiences.
+
+Details Desc:
+I’m a UI/UX Designer and Frontend Developer who genuinely enjoys solving real problems through clean, thoughtful design. Over the past few years, I’ve worked on a variety of projects—designing and building websites, web apps, and user interfaces that are not only visually appealing but also intuitive to use.
+
+My goal is simple: create experiences that feel effortless for users and make sense from a business perspective. I enjoy the process—from sketching early ideas to seeing the final product live and working. I believe good design is less about trends and more about clarity, consistency, and solving the right problems.
+
+I'm always learning, always curious, and I love collaborating with others to bring ideas to life. Whether it's a small landing page or a full-scale application, I aim to create work that I’m proud of and that users actually enjoy interacting with.
+
+
+
+
+I specialize in designing and developing digital products that are both visually appealing and effortless to use. Over the years, I’ve contributed to diverse projects—building websites, web apps, and user interfaces that balance user needs with business goals.
+
+For me, design isn’t about chasing trends—it’s about clarity, consistency, and solving real problems. I enjoy the entire journey: from brainstorming ideas to launching polished products.
+
+Curious by nature and driven by learning, I thrive in collaborative environments where ideas turn into impactful solutions. Whether it’s a simple landing page or a complex application, I aim to deliver work that leaves a lasting impression.
+
+
+Tech Stack Section:
+Section Heading: Design & Dev Stack
+Sub Desc: From Figma to Angular and beyond—these are the tools, frameworks, and languages I use to turn ideas into reality.
+Tools, frameworks, and technologies I rely on to transform ideas into interactive, scalable solutions.
+
+My Journey:
+Section Heading: Quick Look at My Path
+Sub Desc: From early designs to live projects, this timeline highlights my education, experience, and milestones in the digital world.
+A timeline of education, experience, and milestones that shaped my journey in design and development.
+
+Certifications Section:
+Section Heading: Certified Skills
+Sub Desc: A curated collection of certifications that reflect my dedication to continuous learning and professional growth in design and development.
+Recognitions and certifications that highlight my commitment to continuous growth and professional excellence.
+
+Portfolio Section:
+Section Heading: Project & Portfolio
+Sub Desc: Explore my portfolio—case studies and live projects that showcase my design thinking, coding skills, and attention to detail.
+A showcase of real-world projects and case studies that reflect my design thinking, coding expertise, and attention to detail.
+
+Services Section:
+Section Heading: What I Can Do for You
+Sub Desc: From clean UI design to responsive development and scalable design systems — I help turn your ideas into powerful digital experiences.
+From clean UI design to responsive front-end development and scalable design systems, I help turn your ideas into impactful digital solutions.
+
+Say Hello Section:
+Section Heading: Got an Idea? Let’s Build It.
+Sub Desc: Whether you're looking for a designer, developer, or both—I'm always open to new collaborations. Let’s connect and create something great.
+Looking for a designer, a developer, or both? I’m open to new collaborations, let’s connect and bring your vision to life.

@@ -70,8 +70,8 @@ export class NavComponent {
     window.open('https://github.com/SyedHassanAli1', '_blank');
   }
 
-  goToFigma() {
-    window.open('https://www.figma.com/proto/nllImxmzwVW8JT5f3sOWU9/Resume?page-id=20%3A809&node-id=115-1093&viewport=-132%2C399%2C0.54&t=RsC2Fq3IJQIMyT1K-1&scaling=min-zoom&content-scaling=fixed', '_blank');
+  goToDrive() {
+    window.open('https://drive.google.com/file/d/1ia_8ZYVUr7_QIxeV3-YcYNFKO82MuoO8/view?usp=sharing', '_blank');
   }
 
   // downloadCV() {
